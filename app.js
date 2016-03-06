@@ -76,6 +76,7 @@ app.put("/registro/:id", function(req,res){
     res.redirect("/admin");
   });
 });
+
 app.post("/registro",function(req,res){
   var data = {
     name: req.body.nombre,
