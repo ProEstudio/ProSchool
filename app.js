@@ -1,3 +1,5 @@
+/* jshint node: true */
+
 var express = require("express");
 var mongoose = require("mongoose");
 var BodyParser = require("body-parser");
@@ -45,7 +47,7 @@ app.post("/registro",function(req,res){
 
   var userdata = new Userdata(data);
 
-  userdata.save(function(err){
+  userdata.save(function(){
     console.log(userdata);
     res.redirect("/");
   });

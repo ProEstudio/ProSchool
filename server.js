@@ -1,3 +1,4 @@
+/* jshint node: true */
 var express = require("express");
 var mongoose = require("mongoose");
 var BodyParser = require("body-parser");
@@ -12,7 +13,7 @@ cloudinary.config({
 
 var app = express();
 
-var connection_string = '127.0.0.1:27017/nodejs'
+var connection_string = '127.0.0.1:27017/nodejs';
 
 if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD){
     connection_string = process.env.OPENSHIFT_MONGODB_DB_USERNAME + ":"+
@@ -48,16 +49,20 @@ app.get("/",function(req,res){
 
 app.post("/registro",function(req,res){
 
-  var data = {
-    name: req.body.nombre,
-    lastname: req.body.apellido,
-    user: req.body.usuario,
-    email: req.body.correo,
-    imageUrl: "logo.png",
-    pass: req.body.contraseña
-  };
+var data = {
+  name: req.body.nombre,
+  lastname: req.body.apellido,
+  user: req.body.usuario,
+  email: req.body.correo,
+  imageUrl: "logo.png",
+  pass: req.body.contraseña
+};
 
-  var userdata = new Userdata(data);
+var userdata = new Userdata(data);
+userdata.save(function(){
+  console.log(userdata);
+  res.redirect("/");
+});
 
   /*cloudinary.uploader.upload(req.files.image_avatar.path,
     function(result) {
