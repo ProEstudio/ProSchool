@@ -3,7 +3,8 @@ var mongoose = require("mongoose");
 var BodyParser = require("body-parser");
 var multer = require("multer");
 var cloudinary = require("cloudinary");
-
+var index = require("./routes/index.js");
+var birds = require("./routes/birds.js");
 
 cloudinary.config({
   cloud_name: "proestudio",
@@ -13,7 +14,7 @@ cloudinary.config({
 
 var app = express();
 
-mongoose.connect("mongodb://localhost/lestudiante");
+mongoose.connect("mongodb://localhost/userdata");
 
 var usuarioSchema = {
   name:String,
@@ -33,19 +34,12 @@ app.use(multer({dest: "./uploads"}));
 app.set("view engine" , "jade");
 app.use(express.static('public'));
 
-app.get("/",function(req,res){
-    res.render("index");
-});
-
 app.post("/registro",function(req,res){
-  console.log(req.body);
-  res.redirect("/")
   var data = {
     name: req.body.nombre,
     lastname: req.body.apellido,
     user: req.body.usuario,
     email: req.body.correo,
-    imageUrl: "logo.png",
     pass: req.body.contraseña
   };
 
@@ -65,16 +59,7 @@ app.post("/registro",function(req,res){
   });*/
 });
 
-app.get("/registro/estudiante",function(req,res){
-  res.render("registro/estudiante");
-});
 
-app.get("/registro/padre",function(req,res){
-  res.render("registro/padre/padre");
-});
-app.get("/registro/profesor",function(req,res){
-  res.render("registro/profesor");
-});
 
 app.get("/registro",function(req,res){
   Userdata.find(function(error,documento){
@@ -90,10 +75,6 @@ app.post("/perfil",function(req,res){
   });
 });
 
-/*app.get("/perfil",function(req,res){
-    res.render("perfil/padre/index");
-});*/
-
 app.get("/perfil",function(req,res){
     res.render("perfil/estudiante/index");
 });
@@ -103,7 +84,7 @@ app.get("/perfil/actividad",function(req,res){
 });
 
 app.get("/perfil/notas" , function(req,res){
-  res.render("perfil/estudiante/periodo")
+  res.render("perfil/estudiante/periodo");
 });
 
 app.get("/perfil/profesor",function(req,res){
@@ -117,5 +98,24 @@ app.get("/perfil/actividad/horario",function(req,res){
 app.get("/perfil/actividad/periodo",function(req,res){
   res.render("perfil/estudiante/periodo");
 });
+
+var profesor = function(req,res,next){
+  res.render('registro/profesor');
+  next();
+};
+
+var padre = function(req,res,next){
+  res.render('registro/padre');
+  next();
+};
+
+var estudiante = function(req,res){
+  res.render('registro/estudiante');
+};
+app.get('/registro/profesor',profesor);
+app.get('/registro/padre',padre);
+app.get('/registro/estudiante',estudiante);
+app.use("/", index);
+app.use("/birds", birds);
 
 app.listen(5000);
