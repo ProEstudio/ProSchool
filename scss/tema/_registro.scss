@@ -9,3 +9,13 @@
     }
   }
 }
+//INDEX
+.user{
+  color: $azul-oscuro;
+  & h2{
+    color: $verde
+  }
+  & h4{
+    color: $azul-claro
+  }
+}

@@ -1,0 +1,26 @@
+extends ../layout
+block titulo
+  each dato in datos
+    title= dato.name + " " + dato.lastname
+block contenido
+  h1 Panel de Administracion
+  table.table
+    caption Usuarios
+    thead.abcenter
+      tr
+        th.abcenter #
+        th.abcenter Nombre y Apellido
+        th.abcenter Usuario
+        th.abcenter Email
+        th.abcenter Acciones
+    tbody
+      each dato in datos
+        tr
+          td.abcenter= dato.id
+          td.abcenter= dato.name + " " + dato.lastname
+          td.abcenter= dato.user
+          td.abcenter= dato.email
+          td.abcenter
+            a(href="/registro/edit/#{dato.id}") Editar
+            = " - "
+            a(href="#") Eliminar

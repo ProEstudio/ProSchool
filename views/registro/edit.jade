@@ -1,0 +1,19 @@
+extends ../layout
+block titulo
+  title Registro Estudiante
+block contenido
+  .ed-container
+    .ed-item.regest
+      form(method="POST" action="/registro/#{dta.id}?_method=put"  enctype="multipart/form-data")
+        .ed-container
+          .ed-item
+            h1.animated.fadeInLeft Datos Del Usuario #{dta.name + ' ' + dta.lastname}
+          .ed-item.base-50
+            input.animated.fadeInUp.form-control(type="text" value="#{dta.name}" name="nombre" placeholder="Nombre")
+          .ed-item.base-50
+            input.animated.fadeInUp.form-control(type="text" value="#{dta.lastname}"  name="apellido" placeholder="Apellido")
+          .ed-item
+            input.animated.fadeInUp.form-control(type="text" value="#{dta.user}" name="usuario" placeholder="Nombre de Usuario")
+            input.animated.fadeInUp.form-control(type="text" value="#{dta.email}" name="correo" placeholder="Correo Electronico (Opcional)")
+            input.animated.fadeInUp.form-control(type="password" value="#{dta.pass}" name="contraseña" placeholder="Contraseña")
+            input.animated.fadeInUp.button.btn_rg(type="submit" value="Registrar")

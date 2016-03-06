@@ -2895,3 +2895,10 @@ input {
   .regest .button.btn_rg:active {
     -webkit-transform: scale(0.97);
             transform: scale(0.97); }
+
+.user {
+  color: #0B4357; }
+  .user h2 {
+    color: #038A72; }
+  .user h4 {
+    color: #35AFBD; }

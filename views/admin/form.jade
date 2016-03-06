@@ -1,0 +1,14 @@
+extends ../layout
+block titulo
+  title Admin
+block contenido
+  .ed-container
+    .ed-item
+      h1 Login Administrador
+    .ed-item
+      form(action="/admin" method="post")
+        .ed-item.form-group
+          label Contraseña
+          input.form-control(type="password" name="contra" placeholder="Contrseña Administrador")
+        .ed-item.form-group.main-end
+          input.btn.btn-info(type="submit" value="Guardar")

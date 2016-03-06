@@ -7,6 +7,8 @@ var multer = require("multer");
 var cloudinary = require("cloudinary");
 var index = require("./routes/index.js");
 var birds = require("./routes/birds.js");
+var app_password = ("D1e560*9c");
+var method_override = require("method-override");
 
 cloudinary.config({
   cloud_name: "proestudio",
@@ -32,10 +34,48 @@ var Userdata = mongoose.model("Userdata",usuarioSchema);
 app.use(BodyParser.json());
 app.use(BodyParser.urlencoded({extended:true}));
 app.use(multer({dest: "./uploads"}));
+app.use(method_override("_method"));
 
 app.set("view engine" , "jade");
 app.use(express.static('public'));
 
+app.post("/admin",function(req,res){
+  if(req.body.contra == app_password){
+    Userdata.find(function(error,documento){
+      if(error){console.log(error);}
+      res.render("admin/index",{datos:documento});
+    });
+  }else{
+    res.redirect("/");
+  }
+});
+app.get("/admin",function(req,res){
+  res.render("admin/form");
+});
+
+app.get("/registro/edit/:id",function(req,res){
+  var id_user = req.params.id;
+
+  Userdata.findOne({"_id": id_user},function(error,userd){
+    console.log(userd);
+    console.log(error);
+    res.render("registro/edit",{dta:userd});
+  });
+});
+
+app.put("/registro/:id", function(req,res){
+  var data = {
+    name: req.body.nombre,
+    lastname: req.body.apellido,
+    user: req.body.usuario,
+    email: req.body.correo,
+    pass: req.body.contraseña
+  };
+
+  Userdata.update({"_id": req.params.id},data,function(userd){
+    res.redirect("/admin");
+  });
+});
 app.post("/registro",function(req,res){
   var data = {
     name: req.body.nombre,
@@ -49,6 +89,7 @@ app.post("/registro",function(req,res){
 
   userdata.save(function(){
     console.log(userdata);
+    console.log(req.body.contraseña);
     res.redirect("/");
   });
   /*cloudinary.uploader.upload(req.files.image_avatar.path,
@@ -61,19 +102,10 @@ app.post("/registro",function(req,res){
   });*/
 });
 
-
-
 app.get("/registro",function(req,res){
   Userdata.find(function(error,documento){
     if(error){console.log(error);}
     res.render("registro/index",{datos:documento});
-  });
-});
-
-app.post("/perfil",function(req,res){
-  Userdata.find({user:req.body.usuario,pass:req.body.cotraseña},function(err,documento){
-    console.log(documento);
-    res.render("perfil");
   });
 });
 
