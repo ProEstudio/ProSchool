@@ -1,0 +1,48 @@
+extends ../../layout
+block titulo
+  title Jair Perez
+block contenido
+  .ed-container
+    .ed-item.abcenter.avatar.animated.fadeInUp
+      img.base-35(src="/img/4.png", alt="").base-25
+      h3 Hola, Nombre
+      span Alumno
+  .ed-container
+    .ed-item.categ.animated.fadeInUp
+      a(href="")
+        h4 Informacion
+      a(href="/perfil/notas")
+        h4 Mis notas
+      a(href="")
+        h4 Horario
+      a(href="perfil/actividad")
+        h4 Actividad
+  .ed-container
+    .ed-item.contact.animated.fadeInUp
+      .ed-item.avatar-2.no-padding
+        h4 Profesores
+        img.base-20(src="/img/avatar.png", alt="")
+        img.base-20(src="/img/avatar.png", alt="")
+        img.base-20(src="/img/avatar.png", alt="")
+        img.base-20(src="/img/avatar.png", alt="")
+      .ed-item.avatar-2.no-padding
+        h4 Compañeros de clase
+        img.base-20(src="/img/me.jpg", alt="")
+        img.base-20(src="/img/avatar.png", alt="")
+        img.base-20(src="/img/4.png", alt="")
+        img.base-20(src="/img/avatar.png", alt="")
+  .ed-container
+    .ed-item.estado.animated.fadeInUp
+      h3 Atcividad reciente
+      form.acti(action="/perfil" method="post" enctype="multipart/form-data")
+        input.base-80.inpt(type="text" placeholder="Agregar atcividad")
+        //input(type="file", name="image_avatar")
+        input.button.btn_env(type="submit" value="Enviar")
+    .ed-item.avatar-1.base-25
+      img(src="/img/avatar.png", alt="")
+    .ed-item.column.base-75
+      h3 Jair Pérez
+      p Tarea de hoy
+    .ed-item
+      img(src="/img/Estudio(1).png", alt="")
+      input(type="text" placeholder="Agregar comentario")

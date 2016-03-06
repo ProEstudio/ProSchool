@@ -1,0 +1,37 @@
+doctype html
+html(lang="es")
+  head
+    block titulo
+      title
+    meta(charset="utf-8")
+    link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Pacifico"  type='text/css')
+    link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400"  type='text/css')
+    link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="/css/styles.css")
+    link(rel="stylesheet" href="/css/animate.css" type='text/css')
+  body
+    header.animated.fadeIn
+      .ed-container
+        .ed-item.web-20.logo
+          //img(src="/img/logo.png").logo
+          h1.abcenter ProSchool
+        .ed-item.animated.fadeInRight.web-80.main-end.cross-center
+          | Versión 0.1
+          |Beta
+      //nav
+        .ed-container
+          .ed-item
+            ul.ed-menu.nav-bar.web-horizontal
+              li: a(href="#") Inicio
+              li: a(href="/perfil/") Perfil
+              li: a(href="#") Notas
+              li: a(href="#") Horario
+              li: a(href="#") Contacto
+    block contenido
+   footer.abcenter.animated.fadeInUp
+    .ed-container
+      .ed-item.creditos
+        p #[a(href="/Perfil") ProSchool] &copy 2016 | Design by #[a(href="http://jairperez.net16.net") Jair Pérez]
+    script(src="https://code.jquery.com/jquery-2.1.1.min.js")
+    script(src="/js/main.js")

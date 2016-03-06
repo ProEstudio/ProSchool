@@ -1,0 +1,16 @@
+extends ../layout
+block titulo
+  title Registro Estudiante
+block contenido
+  .ed-container
+    .ed-item.regest
+      form(action="/registro" method="post" enctype="multipart/form-data")
+        .ed-container
+          .ed-item
+            h1.animated.fadeInLeft Datos Del Docente
+          .ed-item
+            input.animated.fadeInUp.form-control(type="text" name="correo" placeholder="Correo Electronico")
+          .ed-item
+            input.animated.fadeInUp.form-control(type="password" name="contraseña" placeholder="Contraseña")
+          .ed-item
+            input.animated.fadeInUp.button.btn_rg(type="submit" value="Registrar")

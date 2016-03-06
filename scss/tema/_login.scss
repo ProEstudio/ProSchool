@@ -1,0 +1,14 @@
+.button{
+  &.btn_lg{
+    @include button($verde,$blanco,radius);
+    border: none;
+  }
+}
+input{
+  margin:.2em 0
+}
+.regis{
+  h2{
+    color: $verde;
+  }
+}

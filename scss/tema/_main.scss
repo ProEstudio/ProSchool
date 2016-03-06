@@ -1,0 +1,16 @@
+//INDEX
+#main{
+  padding: 1.5em 0
+}
+.logo{
+  h1{
+    color: $azul
+  }
+}
+.regis{
+  .button{
+    @include button($blanco,$azul-claro,radius);
+    border: 1px solid $azul-claro;
+    margin: 1em .3em
+  }
+}

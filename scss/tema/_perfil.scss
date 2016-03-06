@@ -1,0 +1,94 @@
+.avatar , .categ {
+  border: 1px solid $azul-claro;
+  margin: .3em 0
+}
+.avatar , .avatar-1, .avatar-2{
+  padding: 1em;
+  color: $verde;
+  & img{
+    border-radius: 50%
+  }
+  & h3{
+    color: $azul;
+  }
+  & span{
+    color: $azul-claro
+  }
+}
+.avatar-2{
+  & img{
+    margin:.3em
+  }
+}
+.categ{
+
+  & h4{
+    color: $verde
+  }
+
+}
+.contact{
+  padding: 1em;
+  & h4 {
+    color: $azul-oscuro
+  }
+}
+.estado{
+  & h3{
+    color: $azul
+  }
+  .acti{
+    padding: .5em 0;
+    .inpt{
+      padding: .4em;
+      border: 1px solid $verde;
+      color: $verde
+    }
+    .btn_env{
+      background: $verde;
+      color:$blanco;
+      border: none;
+      margin: auto 0
+    }
+  }
+}
+//PADRE
+.actipadre, .escuela, .profesores {
+  & h3 {
+    color: $verde
+  }
+  & h4{
+    color: $azul
+  }
+  & p{
+    color: $azul-claro
+  }
+}
+.periodo{
+  background: $azul;
+  & h3{
+    color: $blanco
+  }
+  .uno, .dos ,.tres,.cuatro{
+    background: $azul-claro;
+    &:hover{
+      background: $azul;
+      transition: all .2s
+    }
+    & a{
+      color: $blanco;
+    }
+  }
+  .uno{
+    background: $alto
+  }
+  .dos{
+    background: $medio
+  }
+  .tres{
+    background: $bajo
+  }
+  .cuatro{
+    background: $bajo
+  }
+}

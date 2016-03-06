@@ -1,0 +1,19 @@
+extends layout
+block titulo
+  title ProScchool_BETA
+block contenido
+  main#main
+    .ed-container.animated.fadeIn
+      .ed-item.main-center.cross-center
+        form(action="/perfil" method="post")
+          input.base-100.form-control(type="text" name="user" placeholder="Correo / Usuario")
+          input.base-100.form-control(type="password" name="pass" placeholder="Contraseña")
+          input.button.btn_lg.base-100(type="submit" value="Iniciar Sesión")
+      .ed-item.regis.abcenter
+        h2 Registrarse
+        a.button(href="/registro/profesor") Profesor
+        a.button(href="/registro/padre") Padre
+        a.button(href="/registro/estudiante") Estudiante
+    //.ed-container
+      .ed-item
+        img(src="img/logo.png", alt="")

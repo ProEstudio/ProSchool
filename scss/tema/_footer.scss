@@ -1,0 +1,10 @@
+footer{
+  .creditos{
+    & p , & a{
+      color: $azul
+    }
+    & a:hover{
+      color: $azul-claro
+    }
+  }
+}

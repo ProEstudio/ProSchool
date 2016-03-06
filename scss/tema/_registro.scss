@@ -1,0 +1,11 @@
+.regest{
+  & h1{
+    color: $verde;
+  }
+  .button{
+    &.btn_rg{
+      @include button($verde,$blanco,radius);
+      border: none;
+    }
+  }
+}
