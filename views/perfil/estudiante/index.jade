@@ -1,11 +1,11 @@
 extends ../../layout
 block titulo
-  title Jair Perez
+  title #{dto.user}
 block contenido
   .ed-container
     .ed-item.abcenter.avatar.animated.fadeInUp
       img.base-35(src="/img/4.png", alt="").base-25
-      h3 Hola, Nombre
+      h3 Hola, #{dto.name + ' ' + dto.lastname}
       span Alumno
   .ed-container
     .ed-item.categ.animated.fadeInUp
@@ -41,7 +41,7 @@ block contenido
     .ed-item.avatar-1.base-25
       img(src="/img/avatar.png", alt="")
     .ed-item.column.base-75
-      h3 Jair Pérez
+      h3 #{dto.name + ' ' + dto.lastname}
       p Tarea de hoy
     .ed-item
       img(src="/img/Estudio(1).png", alt="")

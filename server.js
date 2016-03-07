@@ -1,4 +1,5 @@
 /* jshint node: true */
+
 var express = require("express");
 var mongoose = require("mongoose");
 var BodyParser = require("body-parser");
@@ -141,7 +142,17 @@ app.get("/registro",function(req,res){
 });
 
 app.post("/perfil",function(req,res){
-  Userdata.find({user:req.body.usuario,pass:req.body.cotraseña},function(err,documento){
+ var user = req.body.user;
+  var pass = req.body.pass;
+
+  Userdata.findOne({"user": user,"pass": pass},function(error,perfiluser){
+    if(pass == perfiluser.pass){
+      console.log(perfiluser.pass);
+      res.render("perfil/estudiante/index",{dto:perfiluser});
+    }else{
+      res.redirect("/");
+    }
+  }); Userdata.find({user:req.body.usuario,pass:req.body.cotraseña},function(err,documento){
     console.log(documento);
     res.render("perfil");
   });

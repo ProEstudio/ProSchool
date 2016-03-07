@@ -49,6 +49,7 @@ app.post("/admin",function(req,res){
     res.redirect("/");
   }
 });
+
 app.get("/admin",function(req,res){
   res.render("admin/form");
 });
@@ -78,6 +79,7 @@ app.put("/registro/:id", function(req,res){
 });
 
 app.post("/registro",function(req,res){
+
   var data = {
     name: req.body.nombre,
     lastname: req.body.apellido,
@@ -93,6 +95,7 @@ app.post("/registro",function(req,res){
     console.log(req.body.contraseña);
     res.redirect("/");
   });
+
   /*cloudinary.uploader.upload(req.files.image_avatar.path,
     function(result) {
       userdata.imageUrl = result.url;
@@ -110,8 +113,19 @@ app.get("/registro",function(req,res){
   });
 });
 
-app.get("/perfil",function(req,res){
-    res.render("perfil/estudiante/index");
+
+app.post("/perfil",function(req,res){
+  var user = req.body.user;
+  var pass = req.body.pass;
+
+  Userdata.findOne({"user": user,"pass": pass},function(error,perfiluser){
+    if(pass == perfiluser.pass){
+      console.log(perfiluser.pass);
+      res.render("perfil/estudiante/index",{dto:perfiluser});
+    }else{
+      res.redirect("/");
+    }
+  });
 });
 
 app.get("/perfil/actividad",function(req,res){
