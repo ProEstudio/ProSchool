@@ -86,6 +86,7 @@ app.put("/registro/:id", function(req,res){
 
   Userdata.update({"_id": req.params.id},data,function(userd){
     res.redirect("/admin");
+    console.log(userd);
   });
 });
 

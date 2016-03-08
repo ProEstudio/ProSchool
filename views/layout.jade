@@ -10,6 +10,7 @@ html(lang="es")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet", href="/css/styles.css")
     link(rel="stylesheet" href="/css/animate.css" type='text/css')
+    link(rel="stylesheet", href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css")
   body
     header.animated.fadeIn
       .ed-container
@@ -30,9 +31,19 @@ html(lang="es")
               li: a(href="#") Contacto
     block contenido
    footer.abcenter.animated.fadeInUp
-    .ed-container
-      .ed-item.creditos
-        p #[a(href="/Perfil") ProSchool] &copy 2016 | Design by #[a(href="http://jairperez.net16.net") Jair Pérez]
-        //a(href="readme.html") Readme
+      .ed-container
+        .ed-item#homeft
+           .ed-container.abcenter
+            .ed-item.base-25
+              a(href="#").lnr.lnr-home
+            .ed-item.base-25
+              a(href="#").lnr.lnr-magnifier
+            .ed-item.base-25
+              a(href="#").lnr.lnr-upload
+            .ed-item.base-25
+              a(href="/perfil").lnr.lnr-user
+        .ed-item.creditos
+          p #[a(href="/Perfil") ProSchool] &copy 2016 | Design by #[a(href="http://jairperez.net16.net") Jair Pérez]
+          //a(href="readme.html") Readme
     script(src="https://code.jquery.com/jquery-2.1.1.min.js")
     script(src="/js/main.js")

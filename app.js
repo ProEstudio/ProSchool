@@ -39,6 +39,10 @@ app.use(method_override("_method"));
 app.set("view engine" , "jade");
 app.use(express.static('public'));
 
+app.get('/home',function(req,res){
+  res.render('home');
+});
+
 app.post("/admin",function(req,res){
   if(req.body.contra == app_password){
     Userdata.find(function(error,documento){
@@ -75,6 +79,7 @@ app.put("/registro/:id", function(req,res){
 
   Userdata.update({"_id": req.params.id},data,function(userd){
     res.redirect("/admin");
+    console.log(userd);
   });
 });
 
@@ -114,18 +119,22 @@ app.get("/registro",function(req,res){
 });
 
 
-app.post("/perfil",function(req,res){
+app.post("/home",function(req,res){
   var user = req.body.user;
   var pass = req.body.pass;
 
   Userdata.findOne({"user": user,"pass": pass},function(error,perfiluser){
     if(pass == perfiluser.pass){
       console.log(perfiluser.pass);
-      res.render("perfil/estudiante/index",{dto:perfiluser});
+      res.render("home",{dto:perfiluser});
     }else{
       res.redirect("/");
     }
   });
+});
+
+app.get("/perfil",function(req,res){
+  res.render("perfil/estudiante/");
 });
 
 app.get("/perfil/actividad",function(req,res){

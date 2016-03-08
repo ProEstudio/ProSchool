@@ -5,6 +5,7 @@
 // Font face. Incluya el import de Google Fonts o su regla font-face
 // Lo usual es una fuente para los textos y otra para los títulos
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300);
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
 
 // Variables para aplicarlas en font-weight
   $light      : 300;
@@ -35,7 +36,7 @@
   $header--font-family    : 'Roboto', sans-serif;     // fuente para los headers (h1,h2,h3...)
   $header--font-weight    : $bold;                    // grosor de fuente para los headers
   $header--text-transform : normal;                   // normal, uppercase, lowercase, capitalize
-  $header--color          : #222;                     // color predeterminado de los header
+  $header--color          : $azul;                     // color predeterminado de los header
 
 // TAMAÑO DE LOS ENCABEZADOS (h1...h6)
   $h1--font-size : 2em;
@@ -71,6 +72,7 @@
   @import "tema/main";
   @import "tema/aside";
   @import "tema/login";
+  @import "tema/home";
   @import "tema/perfil";
   @import "tema/registro";
 

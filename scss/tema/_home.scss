@@ -1,0 +1,10 @@
+#homeft{
+  .lnr-home , .lnr-magnifier , .lnr-upload , .lnr-user{
+    color: $verde;
+    font-size: 2em;
+    &:hover{
+      text-decoration: none;
+      color: $azul
+    }
+  }
+}

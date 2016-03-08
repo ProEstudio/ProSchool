@@ -1,19 +1,40 @@
-extends layout
-block titulo
-  title ProScchool_BETA
-block contenido
-  main#main
-    .ed-container.animated.fadeIn
-      .ed-item.main-center.cross-center
-        form(action="/perfil/" method="post")
-          input.base-100.form-control(type="text" name="user" placeholder="Correo / Usuario")
-          input.base-100.form-control(type="password" name="pass" placeholder="Contraseña")
-          input.button.btn_lg.base-100(type="submit" value="Iniciar Sesión")
-      .ed-item.regis.abcenter
-        h2 Registrarse
-        a.button(href="/registro/profesor") Profesor
-        a.button(href="/registro/padre") Padre
-        a.button(href="/registro/estudiante") Estudiante
-    //.ed-container
-      .ed-item
-        img(src="img/logo.png", alt="")
+doctype html
+html(lang="es")
+  head
+    block titulo
+      title
+    meta(charset="utf-8")
+    link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Pacifico"  type='text/css')
+    link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400"  type='text/css')
+    link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="/css/styles.css")
+    link(rel="stylesheet" href="/css/animate.css" type='text/css')
+    link(rel="stylesheet", href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css")
+  body
+    header.animated.fadeIn
+      .ed-container
+        .ed-item.web-20.logo
+          //img(src="/img/logo.png").logo
+          h1.abcenter ProSchool
+        .ed-item.animated.fadeInRight.web-80.main-end.cross-center
+          | Versión 0.1
+          |Beta
+    main#main
+      .ed-container.animated.fadeIn
+        .ed-item.main-center.cross-center
+          form(action="/home" method="post")
+            input.base-100.form-control(type="text" name="user" placeholder="Correo / Usuario")
+            input.base-100.form-control(type="password" name="pass" placeholder="Contraseña")
+            input.button.btn_lg.base-100(type="submit" value="Iniciar Sesión")
+        .ed-item.regis.abcenter
+          h2 Registrarse
+          a.button(href="/registro/profesor") Profesor
+          a.button(href="/registro/padre") Padre
+          a.button(href="/registro/estudiante") Estudiante
+      //.ed-container
+        .ed-item
+          img(src="img/logo.png", alt="")
+   footer.abcenter.animated.fadeInUp
+      .ed-item.creditos
+        p #[a(href="/Perfil") ProSchool] &copy 2016 | Design by #[a(href="http://jairperez.net16.net") Jair Pérez]
