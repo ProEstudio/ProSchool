@@ -10,10 +10,20 @@
     font-size: 2.5em
   }
 }
-.regis{
-  .button{
+.button{
+  &.btn_uno{
+    @include button($verde,$blanco,radius);
+    border: none;
+  }
+  &.btn_dos{
     @include button($blanco,$azul-claro,radius);
     border: 1px solid $azul-claro;
-    margin: 1em .3em
+  }
+}
+.coment{
+  li{
+    strong{
+      color:$azul
+    }
   }
 }

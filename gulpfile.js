@@ -34,7 +34,7 @@ gulp.task('browser-sync', ['nodemon'], function () {
   browserSync.init(null, {
     proxy: "http://localhost:5000",
     files: ["public/**/*.*","views/**/*.jade"],
-    browser: "Microsft Edge",
+    browser: "Google Chrome",
     port: 7000,
   });
   browserSync.watch('./scss/**/*.scss').on('change', function () {

@@ -2716,7 +2716,7 @@ class="no-padding" a la caja le da padding cero solo a ella
               transform: scale(0.97); }
 
 body {
-  background: #FDFDFD;
+  background: #F5F8FA;
   font-family: "Roboto", sans-serif;
   color: #070D12; }
 
@@ -2773,44 +2773,49 @@ footer .creditos a:hover {
   font-weight: 200;
   font-size: 2.5em; }
 
-.regis .button {
-  display: inline-block;
-  line-height: 2.5em;
-  background: #FDFDFD;
-  color: #35AFBD;
-  padding: 0 1.5em;
-  cursor: pointer;
-  margin-bottom: 1em;
-  border-radius: .25em;
-  border: 1px solid #35AFBD;
-  margin: 1em .3em; }
-  .regis .button:hover {
-    background: #f0f0f0; }
-  .regis .button:active {
-    -webkit-transform: scale(0.97);
-            transform: scale(0.97); }
-
-.button.btn_lg {
+.button.btn_uno {
   display: inline-block;
   line-height: 2.5em;
   background: #038A72;
-  color: #FDFDFD;
+  color: #F5F8FA;
   padding: 0 1.5em;
   cursor: pointer;
   margin-bottom: 1em;
   border-radius: .25em;
   border: none; }
-  .button.btn_lg:hover {
+  .button.btn_uno:hover {
     background: #02715d; }
-  .button.btn_lg:active {
+  .button.btn_uno:active {
     -webkit-transform: scale(0.97);
             transform: scale(0.97); }
+
+.button.btn_dos {
+  display: inline-block;
+  line-height: 2.5em;
+  background: #F5F8FA;
+  color: #35AFBD;
+  padding: 0 1.5em;
+  cursor: pointer;
+  margin-bottom: 1em;
+  border-radius: .25em;
+  border: 1px solid #35AFBD; }
+  .button.btn_dos:hover {
+    background: #e4ecf2; }
+  .button.btn_dos:active {
+    -webkit-transform: scale(0.97);
+            transform: scale(0.97); }
+
+.coment li strong {
+  color: #0E4C73; }
 
 input {
   margin: .2em 0; }
 
 .regis h2 {
   color: #038A72; }
+
+.regis a {
+  margin: .1em .3em; }
 
 #homeft .lnr-home, #homeft .lnr-magnifier, #homeft .lnr-upload, #homeft .lnr-user {
   color: #038A72;
@@ -2855,7 +2860,7 @@ input {
     color: #038A72; }
   .estado .acti .btn_env {
     background: #038A72;
-    color: #FDFDFD;
+    color: #F5F8FA;
     border: none;
     margin: auto 0; }
 
@@ -2871,14 +2876,14 @@ input {
 .periodo {
   background: #0E4C73; }
   .periodo h3 {
-    color: #FDFDFD; }
+    color: #F5F8FA; }
   .periodo .uno, .periodo .dos, .periodo .tres, .periodo .cuatro {
     background: #35AFBD; }
     .periodo .uno:hover, .periodo .dos:hover, .periodo .tres:hover, .periodo .cuatro:hover {
       background: #0E4C73;
       transition: all .2s; }
     .periodo .uno a, .periodo .dos a, .periodo .tres a, .periodo .cuatro a {
-      color: #FDFDFD; }
+      color: #F5F8FA; }
   .periodo .uno {
     background: #038A72; }
   .periodo .dos {
@@ -2888,6 +2893,13 @@ input {
   .periodo .cuatro {
     background: #E95D44; }
 
+.status {
+  border: 1px solid #038A72;
+  border-radius: 5px;
+  margin: 1em 0; }
+  .status p {
+    margin: 1em 0; }
+
 .regest h1 {
   color: #038A72; }
 
@@ -2895,7 +2907,7 @@ input {
   display: inline-block;
   line-height: 2.5em;
   background: #038A72;
-  color: #FDFDFD;
+  color: #F5F8FA;
   padding: 0 1.5em;
   cursor: pointer;
   margin-bottom: 1em;

@@ -92,3 +92,11 @@
     background: $bajo
   }
 }
+.status{
+  border: 1px solid $verde;
+  border-radius: 5px;
+  margin: 1em 0;
+  & p{
+    margin: 1em 0
+  }
+}

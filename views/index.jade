@@ -14,11 +14,11 @@ html(lang="es")
   body
     header.animated.fadeIn
       .ed-container
-        .ed-item.web-20.logo
+        .ed-item.logo
           //img(src="/img/logo.png").logo
           h1.abcenter ProSchool
-        .ed-item.animated.fadeInRight.web-80.main-end.cross-center
-          | Versión 0.1
+        .ed-item.animated.fadeInRight.main-end.cross-center
+          | Versión 0.3
           |Beta
     main#main
       .ed-container.animated.fadeIn
@@ -26,15 +26,15 @@ html(lang="es")
           form(action="/home" method="post")
             input.base-100.form-control(type="text" name="user" placeholder="Correo / Usuario")
             input.base-100.form-control(type="password" name="pass" placeholder="Contraseña")
-            input.button.btn_lg.base-100(type="submit" value="Iniciar Sesión")
+            input.button.btn_uno.base-100(type="submit" value="Iniciar Sesión")
         .ed-item.regis.abcenter
           h2 Registrarse
-          a.button(href="/registro/profesor") Profesor
-          a.button(href="/registro/padre") Padre
-          a.button(href="/registro/estudiante") Estudiante
+          a.button.btn_dos(href="/registro/profesor") Profesor
+          a.button.btn_dos(href="/registro/padre") Padre
+          a.button.btn_dos(href="/registro/estudiante") Estudiante
       //.ed-container
         .ed-item
           img(src="img/logo.png", alt="")
-   footer.abcenter.animated.fadeInUp
+    footer.abcenter.animated.fadeInUp
       .ed-item.creditos
         p #[a(href="/Perfil") ProSchool] &copy 2016 | Design by #[a(href="http://jairperez.net16.net") Jair Pérez]

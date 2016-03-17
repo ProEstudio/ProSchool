@@ -1,3 +1,5 @@
+/* jshint jquery: true */
+/* jshint browser: true */
 jQuery(document).ready(function($){
-     // Code using $ as usual goes here.
+ $();
 });

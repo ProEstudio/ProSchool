@@ -1,5 +1,5 @@
 doctype html
-html(lang="es")
+html(lang="es" ng-app="MyFirstApp")
   head
     block titulo
       title
@@ -11,14 +11,14 @@ html(lang="es")
     link(rel="stylesheet", href="/css/styles.css")
     link(rel="stylesheet" href="/css/animate.css" type='text/css')
     link(rel="stylesheet", href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css")
-  body
+  body(ng-controller="FirstController")
     header.animated.fadeIn
       .ed-container
         .ed-item.web-20.logo
           //img(src="/img/logo.png").logo
           h1.abcenter ProSchool
         .ed-item.animated.fadeInRight.web-80.main-end.cross-center
-          | Versión 0.1
+          | Versión 0.3
           |Beta
       //nav
         .ed-container
@@ -30,9 +30,9 @@ html(lang="es")
               li: a(href="#") Horario
               li: a(href="#") Contacto
     block contenido
-   footer.abcenter.animated.fadeInUp
+    footer.abcenter.animated.fadeInUp
       .ed-container
-        .ed-item#homeft
+        //.ed-item#homeft
            .ed-container.abcenter
             .ed-item.base-25
               a(href="#").lnr.lnr-home
@@ -46,4 +46,7 @@ html(lang="es")
           p #[a(href="/Perfil") ProSchool] &copy 2016 | Design by #[a(href="http://jairperez.net16.net") Jair Pérez]
           //a(href="readme.html") Readme
     script(src="https://code.jquery.com/jquery-2.1.1.min.js")
-    script(src="/js/main.js")
+    script(src="/js/scripts.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js")
+    script(src="/js/controller.js")
+

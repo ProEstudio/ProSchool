@@ -170,10 +170,24 @@ var padre = function(req,res,next){
 var estudiante = function(req,res){
   res.render('registro/estudiante');
 };
+var angular = function(req,res){
+  res.render('angular');
+};
+
+app.get('/angular',angular);
 app.get('/registro/profesor',profesor);
 app.get('/registro/padre',padre);
 app.get('/registro/estudiante',estudiante);
 app.use("/", index);
 app.use("/birds", birds);
 
+app.get('/registro/:id/delete',function(req,res){
+  var id = req.params.id;
+  Userdata.findOne({'_id': id},function(err,userd){
+    res.render('registro/delete',{usd:userd});
+  });
+});
+app.delete('/menu/:id',function(req,res){
+
+});
 app.listen(5000);

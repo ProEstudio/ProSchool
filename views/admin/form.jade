@@ -2,13 +2,14 @@ extends ../layout
 block titulo
   title Admin
 block contenido
-  .ed-container
+  .ed-container.abcenter
     .ed-item
       h1 Login Administrador
-    .ed-item
+    .ed-item.web-20
       form(action="/admin" method="post")
-        .ed-item.form-group
-          label Contraseña
-          input.form-control(type="password" name="contra" placeholder="Contrseña Administrador")
-        .ed-item.form-group.main-end
-          input.btn.btn-info(type="submit" value="Guardar")
+        .ed-container.abcenter
+          .ed-item
+            //input.form-control(type="password" name="contra" placeholder="Usuario Admin")
+            input.form-control(type="password" name="contra" placeholder="Contrseña Admin")
+          .ed-item
+            input.web-100.button.btn_uno(type="submit" value="Entrar")

@@ -1,13 +1,12 @@
-extends ../../home
+extends ../../layout
 block titulo
-  //title #{dto.user}
   title
 block contenido
   .ed-container
     .ed-item.abcenter.avatar.animated.fadeInUp
       img.base-35(src="/img/4.png", alt="").base-25
       //h3 Hola, #{dto.name + ' ' + dto.lastname}
-      h3 Hola,
+      h3 Hola, {{nombre}}
       span Alumno
   .ed-container
     .ed-item.categ.animated.fadeInUp
