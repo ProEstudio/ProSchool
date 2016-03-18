@@ -22,6 +22,7 @@
   $negro       : #070D12;
   $blanco      : #F5F8FA;
   $gris        : #E1E8ED;
+  $gris-oscuro : #e1e8ed;
 
 //PALETA PARA NOTAS
   $bajo        : #E95D44;
@@ -29,9 +30,9 @@
   $alto        : $verde ;
 
 // ESTILOS BASE
-  $body--background  : $negro;                      // fondo para el body
+  $body--background  : $blanco;                      // fondo para el body
   $body--font-family : 'Roboto', sans-serif;        // fuente predeterminada
-  $body--color       : $blanco;                      // color de texto predeterminado
+  $body--color       : $negro;                      // color de texto predeterminado
 
 // ESTILOS DE ENCABEZADOS
   $header--font-family    : 'Roboto', sans-serif;     // fuente para los headers (h1,h2,h3...)

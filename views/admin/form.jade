@@ -1,4 +1,4 @@
-extends ../layout
+extends ../registro/layout
 block titulo
   title Admin
 block contenido
@@ -7,9 +7,6 @@ block contenido
       h1 Login Administrador
     .ed-item.web-20
       form(action="/admin" method="post")
-        .ed-container.abcenter
-          .ed-item
-            //input.form-control(type="password" name="contra" placeholder="Usuario Admin")
-            input.form-control(type="password" name="contra" placeholder="Contrseña Admin")
-          .ed-item
-            input.web-100.button.btn_uno(type="submit" value="Entrar")
+        input.base-100.input.inpt_lg(type="text" name="usern" placeholder="Usuario Admin")
+        input.base-100.input.inpt_lg(type="password" name="contra" placeholder="Contrseña Admin")
+        input.base-100.button.btn_uno(type="submit" value="Entrar")

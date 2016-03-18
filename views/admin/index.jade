@@ -1,9 +1,8 @@
-extends ../layout
+extends ../registro/layout
 block titulo
   each dato in datos
     title= dato.name + " " + dato.lastname
 block contenido
-  h1.abcenter Panel de Administracion
   table.table
     thead.abcenter
       tr
@@ -21,6 +20,21 @@ block contenido
           td.abcenter= dato.user
           td.abcenter= dato.email
           td.abcenter= dato.pass
+          td.abcenter
+            a(href="/registro/edit/#{dato.id}") Editar
+            = " - "
+            a(href="#") Eliminar
+  table.table-movil.base-100
+    thead
+      tr
+        th.abcenter Nombre y Apellido
+        th.abcenter Usuario
+        th.abcenter Acciones
+    tbody
+      each dato in datos
+        tr
+          td.abcenter= dato.name + " " + dato.lastname
+          td.abcenter= dato.user
           td.abcenter
             a(href="/registro/edit/#{dato.id}") Editar
             = " - "

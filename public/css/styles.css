@@ -2716,9 +2716,9 @@ class="no-padding" a la caja le da padding cero solo a ella
               transform: scale(0.97); }
 
 body {
-  background: #070D12;
+  background: #F5F8FA;
   font-family: "Roboto", sans-serif;
-  color: #F5F8FA; }
+  color: #070D12; }
 
 a {
   color: initial;
@@ -2771,62 +2771,55 @@ footer .creditos a:hover {
   color: #0E4C73;
   font-family: 'pacifico', cursive;
   font-weight: 200;
-  font-size: 2.5em; }
+  font-size: 3em; }
 
-.input {
-  border: 1px solid #E1E8ED;
-  border-radius: 3px;
-  padding: .5em; }
-  .input:focus {
-    color: #0E4C73;
+.button {
+  font-size: 15px; }
+  .button.btn_uno {
+    display: inline-block;
+    line-height: 2.5em;
+    background: #038A72;
+    color: #F5F8FA;
+    padding: 0 1.5em;
+    cursor: pointer;
+    margin-bottom: 1em;
+    border-radius: .25em;
+    border: none; }
+    .button.btn_uno:hover {
+      background: #02715d; }
+    .button.btn_uno:active {
+      -webkit-transform: scale(0.97);
+              transform: scale(0.97); }
+  .button.btn_dos {
+    display: inline-block;
+    line-height: 2.5em;
+    background: #F5F8FA;
+    color: #35AFBD;
+    padding: 0 1.5em;
+    cursor: pointer;
+    margin-bottom: 1em;
+    border-radius: .25em;
     border: 1px solid #35AFBD; }
-
-@media screen and (min-width: 768px) {
-  .inpt_rg {
-    max-width: 50%; } }
+    .button.btn_dos:hover {
+      background: #e4ecf2; }
+    .button.btn_dos:active {
+      -webkit-transform: scale(0.97);
+              transform: scale(0.97); }
 
 @media screen and (min-width: 1024px) {
-  .inpt_rg {
-    max-width: 40%; } }
-
-@media screen and (min-width: 768px) {
-  .inpt {
-    padding: 0; } }
-
-.button.btn_uno {
-  display: inline-block;
-  line-height: 2.5em;
-  background: #038A72;
-  color: #F5F8FA;
-  padding: 0 1.5em;
-  cursor: pointer;
-  margin-bottom: 1em;
-  border-radius: .25em;
-  border: none; }
-  .button.btn_uno:hover {
-    background: #02715d; }
-  .button.btn_uno:active {
-    -webkit-transform: scale(0.97);
-            transform: scale(0.97); }
-
-.button.btn_dos {
-  display: inline-block;
-  line-height: 2.5em;
-  background: #F5F8FA;
-  color: #35AFBD;
-  padding: 0 1.5em;
-  cursor: pointer;
-  margin-bottom: 1em;
-  border-radius: .25em;
-  border: 1px solid #35AFBD; }
-  .button.btn_dos:hover {
-    background: #e4ecf2; }
-  .button.btn_dos:active {
-    -webkit-transform: scale(0.97);
-            transform: scale(0.97); }
+  #homeft {
+    display: none; } }
 
 .coment li strong {
   color: #0E4C73; }
+
+@media screen and (min-width: 768px) {
+  .table-movil {
+    display: none; } }
+
+@media screen and (max-width: 479px) {
+  .table {
+    display: none; } }
 
 input {
   margin: .2em 0; }
@@ -2921,7 +2914,10 @@ input {
     margin: 1em 0; }
 
 .regest h1 {
-  color: #038A72; }
+  color: #038A72;
+  font-weight: 400;
+  margin-bottom: 24px;
+  font-size: 35px; }
 
 .regest .button.btn_rg {
   display: inline-block;
@@ -2945,3 +2941,40 @@ input {
     color: #038A72; }
   .user h4 {
     color: #35AFBD; }
+
+.input {
+  border: 1px solid #e1e8ed;
+  border-radius: 3px; }
+  .input:focus {
+    color: #0E4C73;
+    border: 1px solid #35AFBD; }
+
+@media screen and (max-width: 479px) {
+  .inpt_rg {
+    padding: 7px; } }
+
+@media screen and (min-width: 768px) {
+  .inpt_rg {
+    max-width: 50%;
+    font-size: 18px;
+    padding: 10px; } }
+
+@media screen and (min-width: 1024px) {
+  .inpt_rg {
+    max-width: 40%; } }
+
+.inpt_lg {
+  font-size: 16px;
+  padding: 6px;
+  margin-bottom: 8px; }
+
+@media screen and (min-width: 768px) {
+  .inpt {
+    padding: 0; } }
+
+.inpt, .inpt_d {
+  margin: 5px 0; }
+
+@media screen and (min-width: 768px) {
+  .btn {
+    padding: 0; } }

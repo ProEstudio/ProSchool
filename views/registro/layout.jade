@@ -14,31 +14,15 @@ html(lang="es" ng-app="MyFirstApp")
   body(ng-controller="FirstController")
     header.animated.fadeIn
       .ed-container
-        .ed-item.web-50.logo.main-start.cros-center
+        .ed-item.logo.main-center.cros-center
           //img(src="/img/logo.png").logo
           h1.abcenter ProSchool
-        .ed-item.animated.fadeIn.web-25.cross-center.main-center
-          input.input.base-100(type="text")
-        .ed-item.web-25.cross-center
-          .ed-container
-            .ed-item
-              ul.ed-menu.nav-bar.web-horizontal
-                li: a(href="/perfil/") Perfil
-                li: a(href="#") Notas
-                li: a(href="#") Horario
+        .ed-item.animated.fadeIn.cross-center.main-end
+          | Versión 0.3
+          |Beta
     block contenido
     footer.abcenter.animated.fadeInUp
       .ed-container
-        .ed-item#homeft
-           .ed-container.abcenter
-            .ed-item.base-25
-              a(href="#").lnr.lnr-home
-            .ed-item.base-25
-              a(href="#").lnr.lnr-magnifier
-            .ed-item.base-25
-              a(href="#").lnr.lnr-upload
-            .ed-item.base-25
-              a(href="/perfil").lnr.lnr-user
         .ed-item.creditos
           p #[a(href="/Perfil") ProSchool] &copy 2016 | Design by #[a(href="http://jairperez.net16.net") Jair Pérez]
           //a(href="readme.html") Readme

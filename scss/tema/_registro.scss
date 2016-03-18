@@ -1,6 +1,9 @@
 .regest{
   & h1{
     color: $verde;
+    font-weight: 400;
+    margin-bottom: 24px;
+    font-size: 35px
   }
   .button{
     &.btn_rg{
@@ -17,5 +20,45 @@
   }
   & h4{
     color: $azul-claro
+  }
+}
+//REGISTRO
+.input{
+  border: 1px solid $gris-oscuro;
+  border-radius: 3px;
+  &:focus{
+    color: $azul;
+    border: 1px solid $azul-claro;
+  }
+}
+.inpt_rg{
+  @include hasta (movil){
+    padding: 7px
+  }
+  @include desde (tablet){
+    max-width: 50%;
+    font-size: 18px;
+    padding: 10px;
+  }
+  @include desde (web){
+    max-width: 40%
+  }
+}
+.inpt_lg{
+  font-size: 16px;
+  padding: 6px;
+  margin-bottom: 8px
+}
+.inpt{
+  @include desde(tablet){
+    padding: 0
+  }
+}
+.inpt , .inpt_d{
+    margin: 5px 0
+  }
+.btn{
+  @include desde (tablet){
+    padding: 0;
   }
 }

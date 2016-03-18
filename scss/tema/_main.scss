@@ -7,32 +7,13 @@
     color: $azul;
     font-family:'pacifico', cursive;
     font-weight: 200;
-    font-size: 2.5em
+    font-size: 3em
   }
 }
-.input{
-  border: 1px solid $gris;
-  border-radius: 3px;
-  padding: .5em;
-  &:focus{
-    color: $azul;
-    border: 1px solid $azul-claro;
-  }
-}
-.inpt_rg{
-   @include desde (tablet){
-    max-width: 50%
-  }
-  @include desde (web){
-    max-width: 40%
-  }
-}
-.inpt{
-  @include desde(tablet){
-    padding: 0
-  }
-}
+
+//BOTONES
 .button{
+  font-size: 15px;
   &.btn_uno{
     @include button($verde,$blanco,radius);
     border: none;
@@ -42,10 +23,30 @@
     border: 1px solid $azul-claro;
   }
 }
+//HOME
+#homeft{
+  @include desde (web){
+    display: none
+  }
+}
+//PERFIL
 .coment{
   li{
     strong{
       color:$azul
     }
+  }
+}
+//ADMIN
+.table-movil{
+  @include hasta (movil){
+  }
+  @include desde (tablet){
+    display: none
+  }
+}
+.table{
+  @include hasta (movil){
+    display: none
   }
 }
