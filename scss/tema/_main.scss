@@ -7,7 +7,11 @@
     color: $azul;
     font-family:'pacifico', cursive;
     font-weight: 200;
-    font-size: 3em
+    font-size: 3em;
+   @include hasta(movil){
+     text-align: center;
+     padding: .5em
+   }
   }
 }
 
@@ -22,11 +26,12 @@
     @include button($blanco,$azul-claro,radius);
     border: 1px solid $azul-claro;
   }
-}
-//HOME
-#homeft{
-  @include desde (web){
-    display: none
+  &.btn_tres{
+    @include button($blanco,$gris-oscuro);
+    border:none;
+    border-right: 1px solid $gris;
+    border-top: 1px solid $gris;
+    border-bottom: 1px solid $gris;
   }
 }
 //PERFIL

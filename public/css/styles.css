@@ -2758,6 +2758,10 @@ h5 {
 h6 {
   font-size: 0.8em; }
 
+@media screen and (max-width: 479px) {
+  .ed-menu {
+    display: none; } }
+
 footer .creditos p, footer .creditos a {
   color: #0E4C73; }
 
@@ -2772,6 +2776,10 @@ footer .creditos a:hover {
   font-family: 'pacifico', cursive;
   font-weight: 200;
   font-size: 3em; }
+  @media screen and (max-width: 479px) {
+    .logo h1 {
+      text-align: center;
+      padding: .5em; } }
 
 .button {
   font-size: 15px; }
@@ -2805,10 +2813,23 @@ footer .creditos a:hover {
     .button.btn_dos:active {
       -webkit-transform: scale(0.97);
               transform: scale(0.97); }
-
-@media screen and (min-width: 1024px) {
-  #homeft {
-    display: none; } }
+  .button.btn_tres {
+    display: inline-block;
+    line-height: 2.5em;
+    background: #F5F8FA;
+    color: #66757F;
+    padding: 0 1.5em;
+    cursor: pointer;
+    margin-bottom: 1em;
+    border: none;
+    border-right: 1px solid #E1E8ED;
+    border-top: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED; }
+    .button.btn_tres:hover {
+      background: #e4ecf2; }
+    .button.btn_tres:active {
+      -webkit-transform: scale(0.97);
+              transform: scale(0.97); }
 
 .coment li strong {
   color: #0E4C73; }
@@ -2834,9 +2855,6 @@ footer .creditos a:hover {
   .table {
     display: none; } }
 
-input {
-  margin: .2em 0; }
-
 .regis h2 {
   color: #038A72; }
 
@@ -2850,8 +2868,25 @@ input {
     text-decoration: none;
     color: #0E4C73; }
 
+@media screen and (min-width: 1024px) {
+  #homeft {
+    display: none; } }
+
+.sch_inpt {
+  padding: 0 0 0 .5em; }
+
+.sch_btn {
+  padding: 0 .5em 0 0; }
+
+.inpt_sch {
+  padding: .6em;
+  border: none;
+  border-left: 1px solid #E1E8ED;
+  border-top: 1px solid #E1E8ED;
+  border-bottom: 1px solid #E1E8ED; }
+
 .avatar, .categ {
-  border: 1px solid #35AFBD;
+  border: 1px solid #E1E8ED;
   margin: .3em 0; }
 
 .avatar, .avatar-1, .avatar-2 {
@@ -2956,7 +2991,7 @@ input {
     color: #35AFBD; }
 
 .input {
-  border: 1px solid #e1e8ed;
+  border: 1px solid #66757F;
   border-radius: 3px; }
   .input:focus {
     color: #0E4C73;

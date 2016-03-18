@@ -1,0 +1,5 @@
+.ed-menu{
+  @include hasta (movil){
+    display: none
+  }
+}

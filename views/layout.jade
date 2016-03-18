@@ -14,11 +14,13 @@ html(lang="es" ng-app="MyFirstApp")
   body(ng-controller="FirstController")
     header.animated.fadeIn
       .ed-container
-        .ed-item.web-50.logo.main-start.cros-center
+        .ed-item.web-50.logo
           //img(src="/img/logo.png").logo
-          h1.abcenter ProSchool
-        .ed-item.animated.fadeIn.web-25.cross-center.main-center
-          input.input.base-100(type="text")
+          h1 ProSchool
+        .ed-item.sch_inpt.base-80.animated.fadeIn.web-25
+          input.inpt_sch.base-100(type="text" placeholder='Buscar')
+        .ed-item.sch_btn.base-20.animated.fadeIn.web-25
+         button.base-100.button.btn_tres(type='submit').lnr.lnr-magnifier
         .ed-item.web-25.cross-center
           .ed-container
             .ed-item
@@ -29,10 +31,10 @@ html(lang="es" ng-app="MyFirstApp")
     block contenido
     footer.abcenter.animated.fadeInUp
       .ed-container
-        .ed-item#homeft
-           .ed-container.abcenter
+        .ed-item#homeft.abcenter.no-padding
+           .ed-container
             .ed-item.base-25
-              a(href="#").lnr.lnr-home
+              a(href="/home").lnr.lnr-home
             .ed-item.base-25
               a(href="#").lnr.lnr-magnifier
             .ed-item.base-25

@@ -8,3 +8,22 @@
     }
   }
 }
+//HOME
+#homeft{
+  @include desde (web){
+    display: none
+  }
+}
+.sch_inpt{
+  padding: 0 0 0 .5em;
+}
+.sch_btn{
+  padding: 0 .5em 0 0;
+}
+.inpt_sch{
+  padding:.6em;
+  border:none;
+  border-left: 1px solid $gris;
+  border-top: 1px solid $gris;
+  border-bottom: 1px solid $gris;
+}
