@@ -2813,9 +2813,22 @@ footer .creditos a:hover {
 .coment li strong {
   color: #0E4C73; }
 
+@media screen and (max-width: 479px) {
+  .table-movil th, .table-movil td {
+    padding: 5px; }
+    .table-movil th a, .table-movil td a {
+      color: #35AFBD; }
+  .table-movil th {
+    background: #0E4C73;
+    color: #F5F8FA;
+    font-weight: 300; } }
+
 @media screen and (min-width: 768px) {
   .table-movil {
     display: none; } }
+
+.table a {
+  color: #35AFBD; }
 
 @media screen and (max-width: 479px) {
   .table {

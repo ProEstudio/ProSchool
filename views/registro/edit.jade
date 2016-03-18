@@ -1,4 +1,4 @@
-extends ../layout
+extends ../registro/layout
 block titulo
   title Registro Estudiante
 block contenido
@@ -6,14 +6,17 @@ block contenido
     .ed-item.regest
       form(method="POST" action="/registro/#{dta.id}?_method=put"  enctype="multipart/form-data")
         .ed-container
-          .ed-item
-            h1.animated.fadeInLeft Datos Del Usuario #{dta.name + ' ' + dta.lastname}
-          .ed-item.base-50
-            input.animated.fadeInUp.form-control(type="text" value="#{dta.name}" name="nombre" placeholder="Nombre")
-          .ed-item.base-50
-            input.animated.fadeInUp.form-control(type="text" value="#{dta.lastname}"  name="apellido" placeholder="Apellido")
-          .ed-item
-            input.animated.fadeInUp.form-control(type="text" value="#{dta.user}" name="usuario" placeholder="Nombre de Usuario")
-            input.animated.fadeInUp.form-control(type="text" value="#{dta.email}" name="correo" placeholder="Correo Electronico (Opcional)")
-            input.animated.fadeInUp.form-control(type="password" value="#{dta.pass}" name="contraseña" placeholder="Contraseña")
-            input.animated.fadeInUp.button.btn_rg(type="submit" value="Registrar")
+          .ed-item.abcenter
+            h1.animated.fadeInLeft Datos del usuario #{dta.name + ' ' + dta.lastname}
+          .ed-item.inpt_d.base-50.main-end
+            input.base-100.input.inpt_rg.animated.fadeInUp(type="text" value="#{dta.name}" name="nombre" placeholder="Nombre")
+          .ed-item.inpt_d.base-50
+            input.base-100.inpt_rg.input.animated.fadeInUp(type="text" value="#{dta.lastname}"  name="apellido" placeholder="Apellido")
+          .ed-item.abcenter.inpt
+            input.input.inpt_rg.base-100.animated.fadeInUp(type="text" value="#{dta.user}"  name="usuario" placeholder="Nombre de Usuario")
+          .ed-item.abcenter.inpt
+            input.input.inpt_rg.base-100.animated.fadeInUp(type="text" value="#{dta.email}" name="correo" placeholder="Correo Electronico (Opcional)")
+          .ed-item.abcenter.inpt
+            input.input.inpt_rg.base-100.animated.fadeInUp(type="password" value="#{dta.pass}" name="contraseña" placeholder="Contraseña")
+          .ed-item.btn.tablet-75.web-70.main-end
+            input.animated.fadeInUp.button.btn_uno(type="submit" value="Registrar")

@@ -40,12 +40,26 @@
 //ADMIN
 .table-movil{
   @include hasta (movil){
+    & th, & td {
+    padding: 5px;
+      a{
+        color: $azul-claro
+      }
+    }
+    & th{
+      background: $azul;
+      color: $blanco;
+      font-weight: 300;
+    }
   }
   @include desde (tablet){
     display: none
   }
 }
 .table{
+  & a{
+        color: $azul-claro
+      }
   @include hasta (movil){
     display: none
   }
