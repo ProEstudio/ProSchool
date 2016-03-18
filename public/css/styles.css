@@ -2716,9 +2716,9 @@ class="no-padding" a la caja le da padding cero solo a ella
               transform: scale(0.97); }
 
 body {
-  background: #F5F8FA;
+  background: #070D12;
   font-family: "Roboto", sans-serif;
-  color: #070D12; }
+  color: #F5F8FA; }
 
 a {
   color: initial;
@@ -2772,6 +2772,26 @@ footer .creditos a:hover {
   font-family: 'pacifico', cursive;
   font-weight: 200;
   font-size: 2.5em; }
+
+.input {
+  border: 1px solid #E1E8ED;
+  border-radius: 3px;
+  padding: .5em; }
+  .input:focus {
+    color: #0E4C73;
+    border: 1px solid #35AFBD; }
+
+@media screen and (min-width: 768px) {
+  .inpt_rg {
+    max-width: 50%; } }
+
+@media screen and (min-width: 1024px) {
+  .inpt_rg {
+    max-width: 40%; } }
+
+@media screen and (min-width: 768px) {
+  .inpt {
+    padding: 0; } }
 
 .button.btn_uno {
   display: inline-block;

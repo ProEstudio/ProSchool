@@ -21,12 +21,12 @@ html(lang="es")
           | Versión 0.3
           |Beta
     main#main
-      .ed-container.animated.fadeIn
-        .ed-item.main-center.cross-center
+      .ed-container.animated.fadeIn.abcenter
+        .ed-item.base-60.tablet-35.web-25
           form(action="/home" method="post")
-            input.base-100.form-control(type="text" name="user" placeholder="Correo / Usuario")
-            input.base-100.form-control(type="password" name="pass" placeholder="Contraseña")
-            input.button.btn_uno.base-100(type="submit" value="Iniciar Sesión")
+            input.base-100.input(type="text" name="user" placeholder="Correo / Usuario")
+            input.base-100.input(type="password" name="pass" placeholder="Contraseña")
+            input.base-100.button.btn_uno(type="submit" value="Iniciar Sesión")
         .ed-item.regis.abcenter
           h2 Registrarse
           a.button.btn_dos(href="/registro/profesor") Profesor

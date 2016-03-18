@@ -44,7 +44,7 @@ app.get('/home',function(req,res){
 });
 
 app.post("/admin",function(req,res){
-  if(req.body.contra == app_password){
+  if(req.body.contra === app_password){
     Userdata.find(function(error,documento){
       if(error){console.log(error);}
       res.render("admin/index",{datos:documento});

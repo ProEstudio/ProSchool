@@ -10,6 +10,28 @@
     font-size: 2.5em
   }
 }
+.input{
+  border: 1px solid $gris;
+  border-radius: 3px;
+  padding: .5em;
+  &:focus{
+    color: $azul;
+    border: 1px solid $azul-claro;
+  }
+}
+.inpt_rg{
+   @include desde (tablet){
+    max-width: 50%
+  }
+  @include desde (web){
+    max-width: 40%
+  }
+}
+.inpt{
+  @include desde(tablet){
+    padding: 0
+  }
+}
 .button{
   &.btn_uno{
     @include button($verde,$blanco,radius);
