@@ -12,31 +12,39 @@ html(lang="es" ng-app="MyFirstApp")
     link(rel="stylesheet" href="/css/animate.css" type='text/css')
     link(rel="stylesheet", href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css")
   body(ng-controller="FirstController")
-    header.animated.fadeIn
+    header#header.animated.fadeIn
       .ed-container
-        .ed-item.web-50.logo
+        .ed-item.web-20.logo
           //img(src="/img/logo.png").logo
-          h1 ProSchool
-        //.ed-item.web-25.cross-center
+          a(href="/home") ProSchool
+        .ed-item.web-60.buscar
           .ed-container
-            .ed-item
-              ul.ed-menu.nav-bar.web-horizontal
-                li: a(href="/perfil/") Perfil
-                li: a(href="#") Notas
-                li: a(href="#") Horario
+            .ed-item.web-90.sch_inpt.animated.fadeIn
+              input.inpt_sch.base-100(type="text" placeholder='Buscar')
+            .ed-item.web-10.sch_btn.animated.fadeIn
+              button.base-100.button.btn_tres(type='submit').lnr.lnr-magnifier
+        .ed-item.web-20.cross-center.main-center.menu
+          ul.ed-menu.web-horizontal
+            li: a(href="/perfil/") Perfil
+            li: a(href="#") Notas
+            li: a(href="#") Horario
     block contenido
+    nav#homeft
+      .ed-container.abcenter
+        .ed-item.base-25.homeft
+          a(href="/home").lnr.lnr-home
+          p Inicio
+        .ed-item.base-25.buscarft
+          a(href="/buscar").lnr.lnr-magnifier
+          p Buscar
+        .ed-item.base-25.agregarft
+          a(href="/agregar-actividad").lnr.lnr-upload
+          p Agregar
+        .ed-item.base-25.perfilft
+          a(href="/perfil").lnr.lnr-user
+          p Perfil
     footer.abcenter.animated.fadeInUp
       .ed-container
-        .ed-item#homeft.abcenter.no-padding
-           .ed-container
-            .ed-item.base-25
-              a(href="/home").lnr.lnr-home
-            .ed-item.base-25
-              a(href="/buscar").lnr.lnr-magnifier
-            .ed-item.base-25
-              a(href="/agregar-actividad").lnr.lnr-upload
-            .ed-item.base-25
-              a(href="/perfil").lnr.lnr-user
         .ed-item.creditos
           p #[a(href="/Perfil") ProSchool] &copy 2016 | Design by #[a(href="http://jairperez.net16.net") Jair Pérez]
           //a(href="readme.html") Readme

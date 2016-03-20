@@ -2,50 +2,7 @@
 #main{
   padding: 1.5em 0
 }
-.logo{
-  h1{
-    color: $azul;
-    font-family:'pacifico', cursive;
-    font-weight: 200;
-    font-size: 3em;
-   @include hasta(movil){
-     text-align: center;
-     padding: .5em
-   }
-  }
-}
 
-//BOTONES
-.button{
-  font-size: 15px;
-  &.btn_uno{
-    @include button($verde,$blanco,radius);
-    border: none;
-  }
-  &.btn_dos{
-    @include button($blanco,$azul-claro,radius);
-    border: 1px solid $azul-claro;
-  }
-  &.btn_tres{
-    @include button($blanco,$gris-oscuro);
-    border:none;
-    border-right: 1px solid $gris;
-    border-top: 1px solid $gris;
-    border-bottom: 1px solid $gris;
-  }
-  &.btn_cuatro{
-    @include button($blanco,$verde);
-    border:none;
-    border-right: 1px solid $gris;
-    border-top: 1px solid $gris;
-    border-bottom: 1px solid $gris;
-    border-radius: 3px
-  }
-  &.btn_cinco{
-    @include button($blanco,$verde);
-    border:none;
-  }
-}
 //PERFIL
 
 //ADMIN

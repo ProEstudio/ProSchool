@@ -1,4 +1,4 @@
-.avatar , .categ {
+.avatar , .categ ,.agc{
   border: 1px solid $gris;
   margin: .3em 0
 }
@@ -106,5 +106,12 @@
     strong{
       color:$azul
     }
+  }
+}
+#horario{
+  border: 1px solid $gris;
+  margin-top: 1em;
+  th, td {
+    padding: 5px;
   }
 }
