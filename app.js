@@ -187,6 +187,15 @@ app.get('/registro/:id/delete',function(req,res){
     res.render('registro/delete',{usd:userd});
   });
 });
+
+app.get('/agregar-actividad',function(req,res){
+  res.render('agregar');
+});
+
+app.get('/buscar',function(req,res){
+  res.render('buscar');
+});
+
 app.delete('/menu/:id',function(req,res){
 
 });

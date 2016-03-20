@@ -33,15 +33,21 @@
     border-top: 1px solid $gris;
     border-bottom: 1px solid $gris;
   }
-}
-//PERFIL
-.coment{
-  li{
-    strong{
-      color:$azul
-    }
+  &.btn_cuatro{
+    @include button($blanco,$verde);
+    border:none;
+    border-right: 1px solid $gris;
+    border-top: 1px solid $gris;
+    border-bottom: 1px solid $gris;
+    border-radius: 3px
+  }
+  &.btn_cinco{
+    @include button($blanco,$verde);
+    border:none;
   }
 }
+//PERFIL
+
 //ADMIN
 .table-movil{
   @include hasta (movil){

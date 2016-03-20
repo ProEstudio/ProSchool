@@ -2758,10 +2758,6 @@ h5 {
 h6 {
   font-size: 0.8em; }
 
-@media screen and (max-width: 479px) {
-  .ed-menu {
-    display: none; } }
-
 footer .creditos p, footer .creditos a {
   color: #0E4C73; }
 
@@ -2830,9 +2826,38 @@ footer .creditos a:hover {
     .button.btn_tres:active {
       -webkit-transform: scale(0.97);
               transform: scale(0.97); }
-
-.coment li strong {
-  color: #0E4C73; }
+  .button.btn_cuatro {
+    display: inline-block;
+    line-height: 2.5em;
+    background: #F5F8FA;
+    color: #038A72;
+    padding: 0 1.5em;
+    cursor: pointer;
+    margin-bottom: 1em;
+    border: none;
+    border-right: 1px solid #E1E8ED;
+    border-top: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-radius: 3px; }
+    .button.btn_cuatro:hover {
+      background: #e4ecf2; }
+    .button.btn_cuatro:active {
+      -webkit-transform: scale(0.97);
+              transform: scale(0.97); }
+  .button.btn_cinco {
+    display: inline-block;
+    line-height: 2.5em;
+    background: #F5F8FA;
+    color: #038A72;
+    padding: 0 1.5em;
+    cursor: pointer;
+    margin-bottom: 1em;
+    border: none; }
+    .button.btn_cinco:hover {
+      background: #e4ecf2; }
+    .button.btn_cinco:active {
+      -webkit-transform: scale(0.97);
+              transform: scale(0.97); }
 
 @media screen and (max-width: 479px) {
   .table-movil th, .table-movil td {
@@ -2878,12 +2903,24 @@ footer .creditos a:hover {
 .sch_btn {
   padding: 0 .5em 0 0; }
 
+.act_inpt {
+  padding: 0 0 0 1em; }
+
+.act_btn {
+  padding: 0 .5em 0 0; }
+
 .inpt_sch {
   padding: .6em;
   border: none;
   border-left: 1px solid #E1E8ED;
   border-top: 1px solid #E1E8ED;
-  border-bottom: 1px solid #E1E8ED; }
+  border-bottom: 1px solid #E1E8ED;
+  outline: none; }
+
+.inpt_cm {
+  border: none;
+  padding: .6em;
+  outline: none; }
 
 .avatar, .categ {
   border: 1px solid #E1E8ED;
@@ -2955,11 +2992,16 @@ footer .creditos a:hover {
     background: #E95D44; }
 
 .status {
-  border: 1px solid #038A72;
+  border: 1px solid #E1E8ED;
   border-radius: 5px;
   margin: 1em 0; }
   .status p {
     margin: 1em 0; }
+
+.coment {
+  border-bottom: 1px solid #E1E8ED; }
+  .coment li strong {
+    color: #0E4C73; }
 
 .regest h1 {
   color: #038A72;
@@ -2991,7 +3033,7 @@ footer .creditos a:hover {
     color: #35AFBD; }
 
 .input {
-  border: 1px solid #66757F;
+  border: 1px solid #E1E8ED;
   border-radius: 3px; }
   .input:focus {
     color: #0E4C73;
