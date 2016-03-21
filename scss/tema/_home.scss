@@ -17,9 +17,10 @@
     display: none
   }
 }
-.homeft , .buscarft, .agregarft , .perfilft{
+.homeft , .buscarft, .mensajeft , .perfilft{
   padding: 1em;
   &:hover{
-    color:$azul-claro
+    color:$azul-claro;
+    transition: all .60s
   }
 }

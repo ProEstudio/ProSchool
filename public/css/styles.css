@@ -2786,10 +2786,8 @@ h6 {
   #headerlg .logolg a {
     color: #0E4C73;
     font-family: 'pacifico', cursive;
-    text-decoration: none; }
-    @media screen and (min-width: 1024px) {
-      #headerlg .logolg a {
-        font-size: 3em; } }
+    text-decoration: none;
+    font-size: 3em; }
 
 .ed-menu a {
   line-height: 1.9;
@@ -2858,10 +2856,11 @@ footer {
     #homeft {
       display: none; } }
 
-.homeft, .buscarft, .agregarft, .perfilft {
+.homeft, .buscarft, .mensajeft, .perfilft {
   padding: 1em; }
-  .homeft:hover, .buscarft:hover, .agregarft:hover, .perfilft:hover {
-    color: #35AFBD; }
+  .homeft:hover, .buscarft:hover, .mensajeft:hover, .perfilft:hover {
+    color: #35AFBD;
+    transition: all .60s; }
 
 .avatar, .categ, .agc {
   border: 1px solid #E1E8ED;
@@ -2950,29 +2949,29 @@ footer {
   #horario th {
     padding: 5px; }
 
-#horario-2, #horario-2 th, #horario-2 td {
+.horario-2, .horario-2 th, .horario-2 td {
   border: 1px solid #E1E8ED;
   border-collapse: collapse; }
 
-#horario-2 th, #horario-2 td {
+.horario-2 th, .horario-2 td {
   padding: 25px 0; }
 
-#horario-2 .bn {
+.horario-2 .bn {
   background: #F5F8FA; }
 
-#horario-2 .namber {
+.horario-2 .namber {
   padding: 10px;
   background: #35AFBD;
   color: #F5F8FA;
   font-size: 1em; }
 
-#horario-2 th {
+.horario-2 th {
   text-align: center;
   background: #038A72;
   color: #F5F8FA;
   font-size: 2em; }
 
-#horario-2 td {
+.horario-2 td {
   font-size: 1.5em; }
 
 .regest h1 {

@@ -34,9 +34,7 @@
       color: $azul;
       font-family:'pacifico', cursive;
       text-decoration: none;
-      @include desde (web){
-        font-size: 3em;
-      }
+      font-size: 3em;
     }
   }
 }
