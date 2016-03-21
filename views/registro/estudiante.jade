@@ -1,22 +1,6 @@
-extends ./layout
+extends ../layout/layout
 block titulo
   title Registro Estudiante
 block contenido
-  .ed-container
-    .ed-item.regest
-      form(action="/registro" method="post" enctype="multipart/form-data")
-        .ed-container
-          .ed-item.abcenter
-            h1.animated.fadeInLeft Datos Del Estudiante
-          .ed-item.inpt_d.base-50.main-end
-            input.base-100.input.inpt_rg.animated.fadeInUp(type="text" name="nombre" placeholder="Nombre")
-          .ed-item.inpt_d.base-50
-            input.base-100.inpt_rg.input.animated.fadeInUp(type="text" name="apellido" placeholder="Apellido")
-          .ed-item.abcenter.inpt
-            input.input.inpt_rg.base-100.animated.fadeInUp(type="text" name="usuario" placeholder="Nombre de Usuario")
-          .ed-item.abcenter.inpt
-            input.input.inpt_rg.base-100.animated.fadeInUp(type="text" name="correo" placeholder="Correo Electronico (Opcional)")
-          .ed-item.abcenter.inpt
-            input.input.inpt_rg.base-100.animated.fadeInUp(type="password" name="contraseña" placeholder="Contraseña")
-          .ed-item.btn.tablet-75.web-70.main-end
-            input.animated.fadeInUp.button.btn_uno(type="submit" value="Registrar")
+  include ../layout/registro/estudiante/main
+

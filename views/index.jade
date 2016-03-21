@@ -1,40 +1,5 @@
-doctype html
-html(lang="es")
-  head
-    block titulo
-      title
-    meta(charset="utf-8")
-    link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Pacifico"  type='text/css')
-    link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400"  type='text/css')
-    link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet", href="/css/styles.css")
-    link(rel="stylesheet" href="/css/animate.css" type='text/css')
-    link(rel="stylesheet", href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css")
-  body
-    header.animated.fadeIn
-      .ed-container
-        .ed-item.logo
-          //img(src="/img/logo.png").logo
-          h1.abcenter ProSchool
-        .ed-item.animated.fadeInRight.main-end.cross-center
-          | Versión 0.3
-          |Beta
-    main#main
-      .ed-container.animated.fadeIn.abcenter
-        .ed-item.base-60.tablet-35.web-25
-          form(action="/home" method="post")
-            input.base-100.input.inpt_lg(type="text" name="user" placeholder="Correo / Usuario")
-            input.base-100.input.inpt_lg(type="password" name="pass" placeholder="Contraseña")
-            input.base-100.button.btn_uno(type="submit" value="Iniciar Sesión")
-        .ed-item.regis.abcenter
-          h2 Registrarse
-          a.button.btn_dos(href="/registro/profesor") Profesor
-          a.button.btn_dos(href="/registro/padre") Padre
-          a.button.btn_dos(href="/registro/estudiante") Estudiante
-      //.ed-container
-        .ed-item
-          img(src="img/logo.png", alt="")
-    footer.abcenter.animated.fadeInUp
-      .ed-item.creditos
-        p #[a(href="/Perfil") ProSchool] &copy 2016 | Design by #[a(href="http://jairperez.net16.net") Jair Pérez]
+extends layout/layout
+block titulo
+  title ProSchool_BETA
+block contenido
+  include ./layout/index/main

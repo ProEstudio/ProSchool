@@ -1,16 +1,5 @@
-extends ./layout
+extends ../layout/layout
 block titulo
   title Registro Estudiante
 block contenido
-  .ed-container
-    .ed-item.regest
-      form(action="/registro" method="post" enctype="multipart/form-data")
-        .ed-container
-          .ed-item.abcenter
-            h1.animated.fadeInLeft Datos Del Docente
-           .ed-item.abcenter.inpt
-            input.input.inpt_rg.base-100.animated.fadeInUp(type="text" name="correo" placeholder="Correo Electronico (Opcional)")
-          .ed-item.abcenter.inpt
-            input.input.inpt_rg.base-100.animated.fadeInUp(type="password" name="contraseña" placeholder="Contraseña")
-          .ed-item.tablet-75.web-70.main-end.no-padding
-            input.animated.fadeInUp.button.btn_uno(type="submit" value="Registrar")
+  include ../layout/registro/profesor/main

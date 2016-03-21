@@ -43,6 +43,10 @@ app.get('/home',function(req,res){
   res.render('home');
 });
 
+app.get('/horario',function(req,res){
+  res.render('perfil/estudiante/horario');
+});
+
 app.post("/admin",function(req,res){
   if(req.body.contra === app_password){
     Userdata.find(function(error,documento){
@@ -197,6 +201,6 @@ app.get('/buscar',function(req,res){
 });
 
 app.delete('/menu/:id',function(req,res){
-
+  console.log(res);
 });
 app.listen(5000);

@@ -2716,7 +2716,7 @@ class="no-padding" a la caja le da padding cero solo a ella
               transform: scale(0.97); }
 
 body {
-  background: #070D12;
+  background: #F5F8FA;
   font-family: "Roboto", sans-serif;
   color: #070D12; }
 
@@ -2781,6 +2781,16 @@ h6 {
     #header {
       padding: 1em 0; } }
 
+#headerlg {
+  padding: 1.5em; }
+  #headerlg .logolg a {
+    color: #0E4C73;
+    font-family: 'pacifico', cursive;
+    text-decoration: none; }
+    @media screen and (min-width: 1024px) {
+      #headerlg .logolg a {
+        font-size: 3em; } }
+
 .ed-menu a {
   line-height: 1.9;
   color: #66757F;
@@ -2794,11 +2804,12 @@ h6 {
   .buscar, .menu {
     display: none; } }
 
-footer .creditos p, footer .creditos a {
-  color: #0E4C73; }
-
-footer .creditos a:hover {
-  color: #35AFBD; }
+footer {
+  margin: 2em; }
+  footer .creditos p, footer .creditos a {
+    color: #0E4C73; }
+  footer .creditos a:hover {
+    color: #35AFBD; }
 
 #main {
   padding: 1.5em 0; }
@@ -2936,8 +2947,33 @@ footer .creditos a:hover {
 #horario {
   border: 1px solid #E1E8ED;
   margin-top: 1em; }
-  #horario th, #horario td {
+  #horario th {
     padding: 5px; }
+
+#horario-2, #horario-2 th, #horario-2 td {
+  border: 1px solid #E1E8ED;
+  border-collapse: collapse; }
+
+#horario-2 th, #horario-2 td {
+  padding: 25px 0; }
+
+#horario-2 .bn {
+  background: #F5F8FA; }
+
+#horario-2 .namber {
+  padding: 10px;
+  background: #35AFBD;
+  color: #F5F8FA;
+  font-size: 1em; }
+
+#horario-2 th {
+  text-align: center;
+  background: #038A72;
+  color: #F5F8FA;
+  font-size: 2em; }
+
+#horario-2 td {
+  font-size: 1.5em; }
 
 .regest h1 {
   color: #038A72;

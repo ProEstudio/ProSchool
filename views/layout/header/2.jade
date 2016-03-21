@@ -1,0 +1,16 @@
+header#header.animated.fadeIn
+  .ed-container
+    .ed-item.web-20.logo
+      //img(src="/img/logo.png").logo
+      a(href="/home") ProSchool
+    .ed-item.web-60.buscar
+      .ed-container
+        .ed-item.web-90.sch_inpt.animated.fadeIn
+          input.inpt_sch.base-100(type="text" placeholder='Buscar')
+        .ed-item.web-10.sch_btn.animated.fadeIn
+          button.base-100.button.btn_tres(type='submit').lnr.lnr-magnifier
+    .ed-item.web-20.cross-center.main-center.menu
+      ul.ed-menu.web-horizontal
+        li: a(href="/perfil") Perfil
+        li: a(href="#") Notas
+        li: a(href="/horario") Horario
