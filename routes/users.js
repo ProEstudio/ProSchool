@@ -10,6 +10,24 @@ router.post("/",function(req,res){
 });
 
 //REGISTRO
+router.post("/registro",function(req,res){
+    var data = {
+      name: req.body.nombre,
+      lastname: req.body.apellido,
+      user: req.body.usuario,
+      email: req.body.correo,
+      imageUrl: "logo.png",
+      pass: req.body.contraseña
+    };
+    var userdata = new Userdata(data);
+      userdata.save(function(){
+      console.log(userdata);
+      res.redirect("/");
+    });
+});
+router.get('/registro/estudiante',function(req,res){
+  res.render('registro/estudiante');
+});
 //REGISTRO EDITAR
 router.get('/:id/delete',function(req,res){
   var id = req.params.id;
@@ -21,10 +39,6 @@ router.get('/:id/delete',function(req,res){
 //PERFIL
 
 //ADMIN
-router.get('/horario',function(req,res){
-  res.render('perfil/estudiante/horario');
-});
-
 router.post("/admin",function(req,res){
   if(req.body.contra === app_password){
     Userdata.find(function(error,documento){
