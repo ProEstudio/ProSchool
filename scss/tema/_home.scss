@@ -1,3 +1,54 @@
+.publication{
+  padding: 1em .7em;
+  border-top: 1px solid $gris;
+  & a {
+    text-decoration: none;
+    & strong{
+      color: $azul
+    }
+  }
+  & img{
+    border-radius: 50%;
+  }
+  @include hasta (tablet){
+    .cm_inpt , .btn_cm{
+      display: none
+    }
+  }
+}
+.status{
+  margin: 1em .5em;
+  padding-top: 1em;
+  .cm_inpt , .btn_cm{
+    border-top: 1px solid $gris;
+    line-height: 3.5;
+  }
+  & strong{
+      color: $azul
+    }
+  & img{
+    border-radius: 50%;
+  }
+  .usern{
+    color: $gris-oscuro
+  }
+  .tarea{
+    margin: .6em 0
+  }
+  .coment{
+    border-top: 1px solid $gris;
+    padding: .8em 0;
+    & strong{
+      color: $azul-claro
+    }
+  }
+}
+.avth{
+  @include hasta(movil){
+    display: none
+  }
+}
+
 #homeft{
   color: $blanco;
   & a {
@@ -12,7 +63,6 @@
   }
   border-top: 1px solid rgba(0,0,0,0.15);
   padding:0;
-  margin: 1em 0;
   @include desde(web){
     display: none
   }

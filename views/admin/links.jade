@@ -1,0 +1,24 @@
+extends ../layout/layout
+block titulo
+  title Mapa del sitio
+block contenido
+  .ed-container
+    .ed-item
+      - var pages = {page:['Inicio','Registro','Perfil','Admin'],link:['/','/registro','/perfil','/admin']}
+      table.base-100.map-site(border='1')
+        thead
+          tr
+            th.abcenter Pagina
+            th.abcenter(colspan='4') Secciones
+        - for(var i = 0 ; i < pages.page.length ; i++)
+            tbody
+              tr
+                td.abcenter= pages.page[i]
+                td.abcenter
+                  a(href="#{pages.link[i]}") Index
+                td.abcenter
+                  a(href="#{pages.link[i]+'/estudiante'}") Estudiante
+                td.abcenter
+                  a(href="#{pages.link[i]+'/padre'}") Padre
+                td.abcenter
+                  a(href="#{pages.link[i]+'/profesor'}") Profesor

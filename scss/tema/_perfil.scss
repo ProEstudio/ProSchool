@@ -1,8 +1,8 @@
-.avatar , .categ ,.agc{
+.avatar , .categ , .agc{
   border: 1px solid $gris;
   margin: .3em 0
 }
-.avatar , .avatar-1, .avatar-2{
+.avatar , .avatar-1, .avatar-2,.avatar-3{
   padding: 1em;
   color: $verde;
   & img{
@@ -19,6 +19,9 @@
   & img{
     margin:.3em
   }
+}
+.avatar-3{
+  paddin: .5em 0
 }
 .categ{
 
@@ -92,22 +95,7 @@
     background: $bajo
   }
 }
-.status{
-  border: 1px solid $gris;
-  border-radius: 5px;
-  margin: 1em 0;
-  & p{
-    margin: 1em 0
-  }
-}
-.coment{
-  border-bottom: 1px solid $gris;
-  li{
-    strong{
-      color:$azul
-    }
-  }
-}
+
 #horario{
   border: 1px solid $gris;
   margin-top: 1em;

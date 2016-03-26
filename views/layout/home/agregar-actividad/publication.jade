@@ -1,0 +1,40 @@
+//ul.ed-menu.base-columna
+  li.publication(ng-repeat="actividad in actividades")
+    .ed-container
+      .ed-item.base-20.avatar-3
+        img(src="/img/avatar.png", alt="")
+      .ed-item.base-80.main-start.cross-center
+        h4 Usuario
+      .ed-item
+        p.tarea tarea
+      .ed-item.coment
+        img(src="/img/4.png", alt="")
+        li #[strong User] buen
+      .ed-item.animated.fadeInUp.base-70.act_inpt
+        input.inpt_cm.base-100(type="text" placeholder="Añadir un comentario" ng-model="nuevaActividad.tarea")
+      .ed-item.animated.fadeInUp.base-30.act_btn
+        button.button.btn_cinco.base-100(ng-click="agregarActividad()") Enviar
+
+a(href="/user/publicacion")
+  .ed-container
+    .ed-item.no-padding.base-10
+      img(src="/img/4.png", alt="")
+    .ed-item.base-90
+      strong jairperezs
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nam maiores, at nobis eveniet atque, laboriosam facere earum repudiandae numquam molestias beatae ducimus dolor, voluptatum corporis? Magni voluptatum, sit corporis.
+    .ed-item
+      //img(src="/img/4.png", alt="")
+    .ed-item.cm_inpt.no-padding.base-85
+      input.inpt_cm.base-100(type="text" placeholder="Añadir un comentario" ng-model="nuevaActividad.tarea")
+    .ed-item.btn_cm.no-padding.base-15.abcenter
+      button.button.btn_cinco.lnr.lnr-upload.base-100(ng-click="agregarActividad()")
+  //.ed-item
+    .ed-container
+      .ed-item.coment
+        ul.ed-menu.base-columna
+          li(ng-repeat="comentario in comentarios") #[strong {{user}}] {{comentario.comentario}}
+      .ed-item.base-70
+        input.form-control(type="text" placeholder="Agregar Comentario" ng-model="nuevoComentario.comentario")
+        input.form-control(type="text" ng-model="nuevoComentario.username")
+      .ed-item.base-30
+        button.main-end.button.btn_dos(ng-click="agregarComentario()") Enviar

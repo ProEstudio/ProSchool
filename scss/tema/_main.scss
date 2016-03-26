@@ -32,3 +32,21 @@
     display: none
   }
 }
+.map-site{
+  border:1px solid $gris;
+  font-size: 1.5em;
+  td,th{
+    padding: 1em
+  }
+  th{
+    background: $azul;
+    color: $blanco;
+    font-weight: 400
+  }
+  td{
+    color: $verde;
+    & a{
+      color: $azul-claro
+    }
+  }
+}

@@ -35,8 +35,35 @@ router.get('/:id/delete',function(req,res){
     res.render('registro/delete',{usd:userd});
   });
 });
+//HOME
+router.get('/buscar',function(req,res){
+  res.render('buscar');
+});
+
+router.get('/user/publicacion',function(req,res){
+  res.render('status');
+});
 
 //PERFIL
+router.get('/perfil',function(req,res){
+  res.render('home');
+});
+
+router.get('/perfil/estudiante',function(req,res){
+  res.render('perfil/estudiante');
+});
+
+router.get('/perfil/padre',function(req,res){
+  res.render('perfil/padre');
+});
+
+router.get('/perfil/profesor',function(req,res){
+  res.render('perfil/profesor');
+});
+
+router.get('/actividad',function(req,res){
+  res.render('agregar');
+});
 
 //ADMIN
 router.post("/admin",function(req,res){
@@ -54,4 +81,7 @@ router.get("/admin",function(req,res){
   res.render("admin/form");
 });
 
+router.get('/map-site',function(req,res){
+  res.render('admin/links');
+});
 module.exports = router;
