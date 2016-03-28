@@ -1,24 +1,12 @@
 extends ../layout/layout
-block titulo
-  title Mapa del sitio
+title= title
 block contenido
   .ed-container
     .ed-item
-      - var pages = {page:['Inicio','Registro','Perfil','Admin'],link:['/','/registro','/perfil','/admin']}
-      table.base-100.map-site(border='1')
-        thead
-          tr
-            th.abcenter Pagina
-            th.abcenter(colspan='4') Secciones
-        - for(var i = 0 ; i < pages.page.length ; i++)
-            tbody
-              tr
-                td.abcenter= pages.page[i]
-                td.abcenter
-                  a(href="#{pages.link[i]}") Index
-                td.abcenter
-                  a(href="#{pages.link[i]+'/estudiante'}") Estudiante
-                td.abcenter
-                  a(href="#{pages.link[i]+'/padre'}") Padre
-                td.abcenter
-                  a(href="#{pages.link[i]+'/profesor'}") Profesor
+      ul
+        li: a(href="/") Inicio
+        li: a(href="/admin") Admin
+        li: a(href="/registro-estudiante") Registro de Estudiante
+        li: a(href="/registro-padre") Registro de Padre
+        li: a(href="/registro-profesor") Registro de Profesor
+        li: a(href="/users") Usuario

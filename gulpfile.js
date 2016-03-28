@@ -1,7 +1,5 @@
 /* jshint node: true */
-
 'use strict';
-
 /**
  * Dependencias
  */
@@ -26,15 +24,15 @@ gulp.task('sass', function () {
          .on('error', sass.logError))
          .pipe(plumber())
          .pipe(postcss(processors))
-         .pipe(gulp.dest('./public/css'))
+         .pipe(gulp.dest('./public/stylesheets'))
          .pipe(browserSync.stream());
  });
 
 gulp.task('browser-sync', ['nodemon'], function () {
   browserSync.init(null, {
-    proxy: "http://localhost:5000",
-    files: ["public/**/*.*","views/**/*.jade"],
-    browser: "Google Chrome",
+    proxy: "http://localhost:8080",
+    files: ["public/**/*.*","views/**/*.jade","routes/**/*.js","javascripts/**/*.js"],
+    browser: "firefox",
     port: 7000,
   });
   browserSync.watch('./scss/**/*.scss').on('change', function () {
@@ -48,7 +46,7 @@ gulp.task('nodemon', function (cb) {
   var started = false;
 
   return nodemon({
-    script: 'app.js'
+    script: 'server.js'
   }).on('start', function () {
     // to avoid nodemon being started multiple times
     // thanks @matthisk

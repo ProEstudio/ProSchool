@@ -1,18 +1,19 @@
+/* jshint node: true */
 #!/usr/bin/env node
 
 /**
  * Module dependencies.
  */
 
-var app = require('../app');
-var debug = require('debug')('new_app:server');
+var app = require('../server');
+var debug = require('debug')('myapp:server');
 var http = require('http');
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '8080');
 app.set('port', port);
 
 /**

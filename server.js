@@ -1,62 +1,70 @@
 /* jshint node: true */
 
-var express = require("express");
-var BodyParser = require("body-parser");
-var multer = require("multer");
-var cloudinary = require("cloudinary");
-var Userdata = require('./bin/userdb').Userdata;
-var index = require("./routes/index");
-var router_app = require('./routes/users');
-var method_override = require("method-override");
+var express = require('express');
+var path = require('path');
+var favicon = require('serve-favicon');
+var logger = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
 
-
-cloudinary.config({
-  cloud_name: "proestudio",
-  api_key: "563483844553856",
-  api_secret: "iygSyTqraN4NWG1az64_3_YB7B4"
-});
+var routes = require('./routes/index');
+var users = require('./routes/users');
+var admin = require('./routes/admin');
 
 var app = express();
 
-app.use(BodyParser.json());
-app.use(BodyParser.urlencoded({extended:true}));
-app.use(multer({dest: "./uploads"}));
-app.use(method_override("_method"));
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
 
-app.set("view engine" , "jade");
-app.use(express.static('public'));
+// uncomment after placing your favicon in /public
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.get("/registro/edit/:id",function(req,res){
-  var id_user = req.params.id;
+app.use('/', routes);
+app.use('/users', users);
+app.use('/admin', admin);
 
-  Userdata.findOne({"_id": id_user},function(error,userd){
-    console.log(userd);
-    console.log(error);
-    res.render("registro/edit",{dta:userd});
-  });
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  var err = new Error('Not Found');
+  err.status = 404;
+  next(err);
 });
 
-app.put("/registro/:id", function(req,res){
-  var data = {
-    name: req.body.nombre,
-    lastname: req.body.apellido,
-    user: req.body.usuario,
-    email: req.body.correo,
-    pass: req.body.contraseña
-  };
+// error handlers
 
-  Userdata.update({"_id": req.params.id},data,function(userd){
-    res.redirect("/admin");
-    console.log(userd);
+// development error handler
+// will print stacktrace
+if (app.get('env') === 'development') {
+  app.use(function(err, req, res, next) {
+    res.status(err.status || 500);
+    res.render('error', {
+      message: err.message,
+      error: err
+    });
+    console.log(next);
   });
+}
+
+// production error handler
+// no stacktraces leaked to user
+app.use(function(err, req, res, next) {
+  res.status(err.status || 500);
+  res.render('error', {
+    message: err.message,
+    error: {}
+  });
+  console.log(next);
 });
 
-//ROUTERS
-app.use('/', index);
-app.use('/',router_app);
 
-//LISTEN
 var port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 var ip = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
 app.listen(port, ip);
-//app.set('ipaddr', server_ip_address);
+
+module.exports = app;
