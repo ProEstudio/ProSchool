@@ -2759,7 +2759,7 @@ h6 {
   font-size: 0.8em; }
 
 #header {
-  padding: .7em;
+  padding: .5em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   margin-bottom: .5em; }
   #header .logo a {
@@ -2768,26 +2768,23 @@ h6 {
     padding: 0;
     margin: 0;
     font-weight: 200;
-    font-size: 2.5em;
+    font-size: 1.5em;
     text-decoration: none; }
     @media screen and (min-width: 1024px) {
       #header .logo a {
-        font-size: 2em;
-        line-height: 1.1; } }
+        line-height: 1.3; } }
   @media screen and (max-width: 1023px) {
     #header .logo {
       text-align: center; } }
   @media screen and (max-width: 479px) {
     #header {
-      padding: 1em 0; } }
+      display: none; } }
 
-#headerlg {
-  padding: 1.5em; }
-  #headerlg .logolg a {
-    color: #0E4C73;
-    font-family: 'pacifico', cursive;
-    text-decoration: none;
-    font-size: 3em; }
+#headerlg .logolg a {
+  color: #0E4C73;
+  font-family: 'pacifico', cursive;
+  text-decoration: none;
+  font-size: 2.5em; }
 
 .ed-menu a {
   line-height: 1.9;
@@ -2803,7 +2800,7 @@ h6 {
     display: none; } }
 
 .menu a {
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: 500; }
 
 footer .creditos p, footer .creditos a {
@@ -2857,8 +2854,7 @@ footer .creditos a:hover {
   margin: .1em .3em; }
 
 .publication {
-  padding: 1em .7em;
-  border-top: 1px solid #E1E8ED; }
+  padding: 1em .7em; }
   .publication a {
     text-decoration: none; }
     .publication a strong {
@@ -2910,7 +2906,8 @@ footer .creditos a:hover {
       display: none; } }
 
 .homeft, .buscarft, .mensajeft, .perfilft {
-  padding: 1em; }
+  padding: 1em;
+  font-size: .8em; }
   .homeft:hover, .buscarft:hover, .mensajeft:hover, .perfilft:hover {
     color: #35AFBD;
     transition: all .60s; }
@@ -3021,8 +3018,7 @@ footer .creditos a:hover {
 .regest h1 {
   color: #038A72;
   font-weight: 400;
-  margin-bottom: 24px;
-  font-size: 35px; }
+  font-size: 30px; }
 
 .regest .button.btn_rg {
   display: inline-block;
@@ -3056,7 +3052,8 @@ footer .creditos a:hover {
 
 @media screen and (max-width: 479px) {
   .inpt_rg {
-    padding: 7px; } }
+    padding: 7px;
+    font-size: 18px; } }
 
 @media screen and (min-width: 768px) {
   .inpt_rg {
@@ -3202,7 +3199,7 @@ footer .creditos a:hover {
   outline: none; }
   @media screen and (min-width: 1024px) {
     .inpt_sch {
-      padding: .4em .8em; } }
+      padding: .6em .8em; } }
 
 .inpt_cm {
   border: none;

@@ -1,5 +1,5 @@
 #header{
-  padding: .7em ;
+  padding: .5em ;
   .logo{
     a{
       color: $azul;
@@ -7,11 +7,10 @@
       padding: 0;
       margin: 0;
       font-weight: 200;
-      font-size: 2.5em;
+      font-size: 1.5em;
       text-decoration: none;
       @include desde (web){
-        font-size: 2em;
-        line-height: 1.1;
+        line-height: 1.3;
       }
     }
    @include hasta(web){
@@ -22,19 +21,18 @@
   //box-shadow: 1px 1px 1px #888888;
   margin-bottom: .5em;
   @include hasta(movil){
-    padding: 1em 0
+    display: none
   }
   @include desde (web){
   }
 }
 #headerlg{
-  padding: 1.5em;
   .logolg{
     a{
       color: $azul;
       font-family:'pacifico', cursive;
       text-decoration: none;
-      font-size: 3em;
+      font-size: 2.5em;
     }
   }
 }
@@ -50,12 +48,12 @@
 }
 .buscar ,  .menu{
   @include hasta(web){
-    display: none
+    display: none;
   }
 }
 .menu{
   & a{
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-weight: 500
   }
 }

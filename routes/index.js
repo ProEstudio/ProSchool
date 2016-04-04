@@ -9,20 +9,30 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'ProSchool_BETA' });
 });
 
-/* GET Registro page. */
-router.get('/registro', function(req, res) {
-  res.send('Area De reigstro');
+router.post('/',function(req,res){
+  res.render('../views/home', {title: 'Proschool'});
 });
 
-router.get('/registro-estudiante', function(req, res) {
+/* GET Registro page. */
+router.post('/registro', function(req,res) {
   var userdata = new Userdata({
-    name:req.nombre,
+    name:req.body.nombre,
     lastname:req.apellido,
     user:req.usuario,
     email:req.correo,
     pass:req.password,
     tipo:'estudiante'
   });
+
+  userdata.save(function(err){
+    if(err){
+      console.log(String(err));
+    }
+    res.send('Guardamos' +req.body.nombre);
+  });
+});
+
+router.get('/registro-estudiante', function(req, res) {
   res.render('registro/estudiante', { title: 'Registro - Estudiante' });
 });
 

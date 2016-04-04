@@ -2,8 +2,8 @@
   & h1{
     color: $verde;
     font-weight: 400;
-    margin-bottom: 24px;
-    font-size: 35px
+    //margin-bottom: 24px;
+    font-size: 30px
   }
   .button{
     &.btn_rg{
@@ -33,7 +33,8 @@
 }
 .inpt_rg{
   @include hasta (movil){
-    padding: 7px
+    padding: 7px;
+    font-size: 18px
   }
   @include desde (tablet){
     max-width: 50%;
