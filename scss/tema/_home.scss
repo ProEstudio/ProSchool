@@ -9,7 +9,11 @@
   & img{
     border-radius: 50%;
   }
+  @include hasta(movil){
+    border-bottom: 1px solid $gris;
+  }
   @include hasta (tablet){
+    font-weight: 300;
     .cm_inpt , .btn_cm{
       display: none
     }
@@ -17,11 +21,11 @@
 }
 .status{
   margin: 1em .5em;
-  padding-top: 1em;
   .cm_inpt , .btn_cm{
     border-top: 1px solid $gris;
     line-height: 3.5;
   }
+
   & strong{
       color: $azul
     }
@@ -73,4 +77,7 @@
     color:$azul-claro;
     transition: all .60s
   }
+}
+#homeft{
+  border-bottom: 1px solid rgba(0,0,0,0.15);
 }

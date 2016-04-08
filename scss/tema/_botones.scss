@@ -16,6 +16,15 @@
     border-top: 1px solid $gris;
     border-bottom: 1px solid $gris;
     outline: none;
+    @include hasta(movil){
+      margin: 0;
+      line-height: 2.1;
+      font-weight: 600;
+      &:hover{
+        background: $azul-claro;
+        color: $blanco
+      }
+    }
     @include desde (web){
       margin: 0;
       line-height: 2.1;
@@ -37,5 +46,8 @@
     @include button($blanco,$verde);
     line-height: 2;
     border:none;
+    &:hover{
+      background: $blanco;
+    }
   }
 }

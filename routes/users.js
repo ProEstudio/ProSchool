@@ -7,5 +7,9 @@ router.get('/', function(req, res, next) {
   res.render('../views/perfil/estudiante',{title:'users'});
 });
 
+router.get('/publication', function(req, res, next) {
+  res.render('../views/status',{title:'Proschool'});
+});
+
 
 module.exports = router;

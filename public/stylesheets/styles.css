@@ -2847,6 +2847,9 @@ footer .creditos a:hover {
     .map-site td a {
       color: #35AFBD; }
 
+#buscar {
+  margin-top: .8em; }
+
 .regis h2 {
   color: #038A72; }
 
@@ -2861,13 +2864,17 @@ footer .creditos a:hover {
       color: #0E4C73; }
   .publication img {
     border-radius: 50%; }
+  @media screen and (max-width: 479px) {
+    .publication {
+      border-bottom: 1px solid #E1E8ED; } }
   @media screen and (max-width: 767px) {
-    .publication .cm_inpt, .publication .btn_cm {
-      display: none; } }
+    .publication {
+      font-weight: 300; }
+      .publication .cm_inpt, .publication .btn_cm {
+        display: none; } }
 
 .status {
-  margin: 1em .5em;
-  padding-top: 1em; }
+  margin: 1em .5em; }
   .status .cm_inpt, .status .btn_cm {
     border-top: 1px solid #E1E8ED;
     line-height: 3.5; }
@@ -2912,13 +2919,24 @@ footer .creditos a:hover {
     color: #35AFBD;
     transition: all .60s; }
 
+#homeft {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
+
 .avatar, .categ, .agc {
   border: 1px solid #E1E8ED;
   margin: .3em 0; }
+  @media screen and (max-width: 479px) {
+    .avatar, .categ, .agc {
+      margin: 0;
+      border: none;
+      border-bottom: 1px solid #E1E8ED;
+      margin-bottom: .5em; } }
 
 .avatar, .avatar-1, .avatar-2, .avatar-3 {
   padding: 1em;
   color: #038A72; }
+  .avatar img, .avatar-1 img, .avatar-2 img, .avatar-3 img {
+    border: 1px solid #E1E8ED; }
   .avatar img, .avatar-1 img, .avatar-2 img, .avatar-3 img {
     border-radius: 50%; }
   .avatar h3, .avatar-1 h3, .avatar-2 h3, .avatar-3 h3 {
@@ -2963,6 +2981,10 @@ footer .creditos a:hover {
 
 .actipadre p, .escuela p, .profesores p {
   color: #35AFBD; }
+
+@media screen and (max-width: 479px) {
+  .ph {
+    padding: 0; } }
 
 .periodo {
   background: #0E4C73; }
@@ -3131,6 +3153,14 @@ footer .creditos a:hover {
     .button.btn_tres:active {
       -webkit-transform: scale(0.97);
               transform: scale(0.97); }
+    @media screen and (max-width: 479px) {
+      .button.btn_tres {
+        margin: 0;
+        line-height: 2.1;
+        font-weight: 600; }
+        .button.btn_tres:hover {
+          background: #35AFBD;
+          color: #FAFAFA; } }
     @media screen and (min-width: 1024px) {
       .button.btn_tres {
         margin: 0;
@@ -3171,6 +3201,8 @@ footer .creditos a:hover {
     .button.btn_cinco:active {
       -webkit-transform: scale(0.97);
               transform: scale(0.97); }
+    .button.btn_cinco:hover {
+      background: #FAFAFA; }
 
 .sch_inpt {
   padding: 0 0 0 .5em; }

@@ -2,16 +2,19 @@ main
   .ed-container
     .ed-item.abcenter.avatar.animated.fadeInUp.web-20
       include avatar
-    .ed-item.web-80
+    .ed-item.ph.web-80.animated.fadeInUp
       include periodos
       include horario
     .ed-item.categ.animated.fadeInUp.web-20
       include links
     .ed-item.web-80
-    .ed-item.contact.web-20
+    .ed-item.contact.web-20.animated.fadeInUp
       include contactos
     .ed-item.web-80
-      include ../home/agregar-actividad/main
-      include ../home/agregar-actividad/main
-      include ../home/agregar-actividad/main
-      include ../home/agregar-actividad/main
+      .ed-container
+        .ed-item.no-padding
+          h4 Tareas Realizadas
+        .ed-item.no-padding.publication.animated.fadeInUp
+          include ../home/agregar-actividad/publication
+        .ed-item.no-padding.publication.animated.fadeInUp
+          include ../home/agregar-actividad/publication

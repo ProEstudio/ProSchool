@@ -1,9 +1,18 @@
 .avatar , .categ , .agc{
   border: 1px solid $gris;
-  margin: .3em 0
+  margin: .3em 0;
+  @include hasta(movil){
+    margin:0;
+    border: none;
+    border-bottom: 1px solid $gris;
+    margin-bottom: .5em
+  }
 }
 .avatar , .avatar-1, .avatar-2,.avatar-3{
   padding: 1em;
+  img{
+    border: 1px solid $gris;
+  }
   color: $verde;
   & img{
     border-radius: 50%
@@ -65,6 +74,11 @@
   }
   & p{
     color: $azul-claro
+  }
+}
+.ph{
+  @include hasta(movil){
+    padding: 0
   }
 }
 .periodo{

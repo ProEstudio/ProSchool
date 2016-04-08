@@ -9,8 +9,17 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'ProSchool_BETA' });
 });
 
+
 router.post('/',function(req,res){
   res.render('../views/home', {title: 'Proschool'});
+});
+
+router.get('/home',function(req,res){
+  res.render('../views/home');
+});
+
+router.get('/buscar',function(req,res){
+  res.render('../views/buscar');
 });
 
 /* GET Registro page. */
