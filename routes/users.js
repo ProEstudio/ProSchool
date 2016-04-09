@@ -11,5 +11,9 @@ router.get('/publication', function(req, res, next) {
   res.render('../views/status',{title:'Proschool'});
 });
 
+router.get('/actividad', function(req, res, next) {
+  res.render('../views/home',{title:'Proschool'});
+});
+
 
 module.exports = router;

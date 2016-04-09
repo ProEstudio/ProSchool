@@ -1,11 +1,10 @@
-.avatar , .categ , .agc{
+.avatar , .categ , .agc , .publicacion ,{
+  margin: .3em;
   border: 1px solid $gris;
-  margin: .3em 0;
   @include hasta(movil){
     margin:0;
     border: none;
     border-bottom: 1px solid $gris;
-    margin-bottom: .5em
   }
 }
 .avatar , .avatar-1, .avatar-2,.avatar-3{
@@ -30,7 +29,7 @@
   }
 }
 .avatar-3{
-  paddin: .5em 0
+  padding: .5em 0
 }
 .categ{
 
@@ -40,9 +39,14 @@
 
 }
 .contact{
-  padding: 1em;
+
+  & .cnt{
+    border-bottom: 1px solid $gris;
+    padding-bottom: 2em
+  }
+
   & h4 {
-    color: $azul-oscuro
+    color: $azul-oscuro;
   }
 }
 .estado{
@@ -84,10 +88,18 @@
 .periodo{
   background: $azul;
   & h3{
-    color: $blanco
+    color: $blanco;
+    @include desde(web){
+      font-weight: 400;
+      font-size: 2em
+    }
   }
   .uno, .dos ,.tres,.cuatro{
     background: $azul-claro;
+    padding: .5em 0;
+    @include desde (web){
+      font-size: 1.2em
+    }
     &:hover{
       background: $azul;
       transition: all .2s
@@ -112,9 +124,16 @@
 
 #horario{
   border: 1px solid $gris;
-  margin-top: 1em;
   th {
-    padding: 5px;
+    padding: 10px;
+    color: $azul
+  }
+  .namber{
+    padding: 8px;
+    color: $azul-claro
+  }
+  td{
+    color: $gris-oscuro
   }
 }
 .horario-2{
@@ -143,4 +162,24 @@
   td{
     font-size: 1.5em
   }
+}
+.tra{
+  @include hasta(movil){
+    display: none
+  }
+  border-bottom: 1px solid $gris;
+}
+.publicacion{
+  border: none;
+  @include desde (web){
+    & h2 {
+      margin-top: 3em
+    }
+  }
+}
+.tituinf{
+  background: $verde;
+  color: $blanco !important;
+  font-weight: 300;
+  padding: .3em
 }

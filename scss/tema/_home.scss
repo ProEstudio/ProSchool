@@ -18,6 +18,14 @@
       display: none
     }
   }
+  @include desde (web){
+    font-weight: 300;
+    border-bottom: 1px solid $gris;
+    .cm_inpt , .btn_cm{
+      display: none
+    }
+  }
+
 }
 .status{
   margin: 1em .5em;
@@ -80,4 +88,9 @@
 }
 #homeft{
   border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+.display{
+  @include hasta(movil){
+    display: none
+  }
 }

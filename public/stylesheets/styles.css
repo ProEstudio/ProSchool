@@ -2849,6 +2849,12 @@ footer .creditos a:hover {
 
 #buscar {
   margin-top: .8em; }
+  @media screen and (min-width: 1024px) {
+    #buscar {
+      display: none; } }
+
+.pb {
+  background: red; }
 
 .regis h2 {
   color: #038A72; }
@@ -2870,6 +2876,12 @@ footer .creditos a:hover {
   @media screen and (max-width: 767px) {
     .publication {
       font-weight: 300; }
+      .publication .cm_inpt, .publication .btn_cm {
+        display: none; } }
+  @media screen and (min-width: 1024px) {
+    .publication {
+      font-weight: 300;
+      border-bottom: 1px solid #E1E8ED; }
       .publication .cm_inpt, .publication .btn_cm {
         display: none; } }
 
@@ -2922,15 +2934,18 @@ footer .creditos a:hover {
 #homeft {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
 
-.avatar, .categ, .agc {
-  border: 1px solid #E1E8ED;
-  margin: .3em 0; }
+@media screen and (max-width: 479px) {
+  .display {
+    display: none; } }
+
+.avatar, .categ, .agc, .publicacion {
+  margin: .3em;
+  border: 1px solid #E1E8ED; }
   @media screen and (max-width: 479px) {
-    .avatar, .categ, .agc {
+    .avatar, .categ, .agc, .publicacion {
       margin: 0;
       border: none;
-      border-bottom: 1px solid #E1E8ED;
-      margin-bottom: .5em; } }
+      border-bottom: 1px solid #E1E8ED; } }
 
 .avatar, .avatar-1, .avatar-2, .avatar-3 {
   padding: 1em;
@@ -2948,15 +2963,17 @@ footer .creditos a:hover {
   margin: .3em; }
 
 .avatar-3 {
-  paddin: .5em 0; }
+  padding: .5em 0; }
 
 .categ h4 {
   color: #038A72; }
 
-.contact {
-  padding: 1em; }
-  .contact h4 {
-    color: #0B4357; }
+.contact .cnt {
+  border-bottom: 1px solid #E1E8ED;
+  padding-bottom: 2em; }
+
+.contact h4 {
+  color: #0B4357; }
 
 .estado h3 {
   color: #0E4C73; }
@@ -2990,8 +3007,16 @@ footer .creditos a:hover {
   background: #0E4C73; }
   .periodo h3 {
     color: #FAFAFA; }
+    @media screen and (min-width: 1024px) {
+      .periodo h3 {
+        font-weight: 400;
+        font-size: 2em; } }
   .periodo .uno, .periodo .dos, .periodo .tres, .periodo .cuatro {
-    background: #35AFBD; }
+    background: #35AFBD;
+    padding: .5em 0; }
+    @media screen and (min-width: 1024px) {
+      .periodo .uno, .periodo .dos, .periodo .tres, .periodo .cuatro {
+        font-size: 1.2em; } }
     .periodo .uno:hover, .periodo .dos:hover, .periodo .tres:hover, .periodo .cuatro:hover {
       background: #0E4C73;
       transition: all .2s; }
@@ -3007,10 +3032,15 @@ footer .creditos a:hover {
     background: #E95D44; }
 
 #horario {
-  border: 1px solid #E1E8ED;
-  margin-top: 1em; }
+  border: 1px solid #E1E8ED; }
   #horario th {
-    padding: 5px; }
+    padding: 10px;
+    color: #0E4C73; }
+  #horario .namber {
+    padding: 8px;
+    color: #35AFBD; }
+  #horario td {
+    color: #66757F; }
 
 .horario-2, .horario-2 th, .horario-2 td {
   border: 1px solid #E1E8ED;
@@ -3036,6 +3066,24 @@ footer .creditos a:hover {
 
 .horario-2 td {
   font-size: 1.5em; }
+
+.tra {
+  border-bottom: 1px solid #E1E8ED; }
+  @media screen and (max-width: 479px) {
+    .tra {
+      display: none; } }
+
+.publicacion {
+  border: none; }
+  @media screen and (min-width: 1024px) {
+    .publicacion h2 {
+      margin-top: 3em; } }
+
+.tituinf {
+  background: #038A72;
+  color: #FAFAFA !important;
+  font-weight: 300;
+  padding: .3em; }
 
 .regest h1 {
   color: #038A72;

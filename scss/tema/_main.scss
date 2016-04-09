@@ -51,5 +51,11 @@
   }
 }
 #buscar{
-  margin-top: .8em
+  margin-top: .8em;
+  @include desde (web){
+    display: none
+  }
+}
+.pb{
+  background: red
 }

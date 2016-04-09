@@ -15,7 +15,7 @@ router.post('/',function(req,res){
 });
 
 router.get('/home',function(req,res){
-  res.render('../views/home');
+  res.render('../views/home',{title: 'Proschool'});
 });
 
 router.get('/buscar',function(req,res){
