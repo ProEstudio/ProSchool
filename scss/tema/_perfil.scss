@@ -39,14 +39,13 @@
 
 }
 .contact{
-
-  & .cnt{
-    border-bottom: 1px solid $gris;
-    padding-bottom: 2em
-  }
-
   & h4 {
-    color: $azul-oscuro;
+    color: $blanco;
+    background: $verde;
+    font-weight: 300;
+    padding: .3em;
+    margin: 0 .8em;
+    margin-bottom: .7em;
   }
 }
 .estado{
@@ -177,9 +176,28 @@
     }
   }
 }
-.tituinf{
-  background: $verde;
-  color: $blanco !important;
-  font-weight: 300;
-  padding: .3em
+.categ{
+  padding: .8em;
+  & a {
+    & h4{
+      //background: $verde;
+      padding: .3em;
+      margin: 0;
+      font-weight: 400;
+      &:hover{
+        background: $gris;
+        color: $azul;
+        border-right: 2px solid $azul;
+        transition: .4s all
+      }
+    }
+  }
+  .tituinf{
+    background: $verde;
+    color: $blanco !important;
+    font-weight: 300;
+    padding: .3em;
+    margin: 0;
+    margin-bottom: .8em
+  }
 }

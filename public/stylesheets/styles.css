@@ -2780,6 +2780,10 @@ h6 {
     #header {
       display: none; } }
 
+@media screen and (min-width: 1024px) {
+  #headerlg {
+    margin: 1.5em 0; } }
+
 #headerlg .logolg a {
   color: #0E4C73;
   font-family: 'pacifico', cursive;
@@ -2887,9 +2891,13 @@ footer .creditos a:hover {
 
 .status {
   margin: 1em .5em; }
-  .status .cm_inpt, .status .btn_cm {
-    border-top: 1px solid #E1E8ED;
-    line-height: 3.5; }
+  .status .cm_inpt .inpt_cm, .status .btn_cm .inpt_cm {
+    padding-left: .6em; }
+  .status .cm_inpt .inpt_cm, .status .cm_inpt .btn_cinco, .status .btn_cm .inpt_cm, .status .btn_cm .btn_cinco {
+    outline: none; }
+    @media screen and (min-width: 1024px) {
+      .status .cm_inpt .inpt_cm, .status .cm_inpt .btn_cinco, .status .btn_cm .inpt_cm, .status .btn_cm .btn_cinco {
+        font-size: 1.3em; } }
   .status strong {
     color: #0E4C73; }
   .status img {
@@ -2900,7 +2908,8 @@ footer .creditos a:hover {
     margin: .6em 0; }
   .status .coment {
     border-top: 1px solid #E1E8ED;
-    padding: .8em 0; }
+    border-bottom: 1px solid #E1E8ED;
+    margin-top: 1em; }
     .status .coment strong {
       color: #35AFBD; }
 
@@ -2968,12 +2977,13 @@ footer .creditos a:hover {
 .categ h4 {
   color: #038A72; }
 
-.contact .cnt {
-  border-bottom: 1px solid #E1E8ED;
-  padding-bottom: 2em; }
-
 .contact h4 {
-  color: #0B4357; }
+  color: #FAFAFA;
+  background: #038A72;
+  font-weight: 300;
+  padding: .3em;
+  margin: 0 .8em;
+  margin-bottom: .7em; }
 
 .estado h3 {
   color: #0E4C73; }
@@ -3079,11 +3089,24 @@ footer .creditos a:hover {
     .publicacion h2 {
       margin-top: 3em; } }
 
-.tituinf {
-  background: #038A72;
-  color: #FAFAFA !important;
-  font-weight: 300;
-  padding: .3em; }
+.categ {
+  padding: .8em; }
+  .categ a h4 {
+    padding: .3em;
+    margin: 0;
+    font-weight: 400; }
+    .categ a h4:hover {
+      background: #E1E8ED;
+      color: #0E4C73;
+      border-right: 2px solid #0E4C73;
+      transition: .4s all; }
+  .categ .tituinf {
+    background: #038A72;
+    color: #FAFAFA !important;
+    font-weight: 300;
+    padding: .3em;
+    margin: 0;
+    margin-bottom: .8em; }
 
 .regest h1 {
   color: #038A72;

@@ -1,7 +1,7 @@
 /* jshint node: true */
 
-/*var mongoose = require("mongoose");
-var Schema   = mongoose.Schema;
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
 //APLICACION SERVER
 var connection_string = '127.0.0.1:27017/nodejs';
@@ -17,19 +17,15 @@ if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD){
 //mongoose.connect("mongodb://"+connection_string);
 
 //APLICACION LOCAL
-//mongoose.connect("mongodb://localhost/ps_user");
-
-var usuarioSchema = new Schema({
-  tipo: String,
+var userSchema = new Schema({
+  type:String,
   name:String,
   lastname:String,
-  user:String,
+  username:String,
   email:String,
-  pass:String,
-  imageUrl:String
+
 });
 
-var Userdata = mongoose.model("Userdata",usuarioSchema);
+mongoose.connect("mongodb://localhost/ps_user");
 
-module.exports.Userdata = Userdata;
-*/
+module.exports = mongoose.model('estudiante', userSchema);

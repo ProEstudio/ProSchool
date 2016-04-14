@@ -30,8 +30,16 @@
 .status{
   margin: 1em .5em;
   .cm_inpt , .btn_cm{
-    border-top: 1px solid $gris;
-    line-height: 3.5;
+    //border-top: 1px solid $gris;
+    .inpt_cm{
+      padding-left: .6em;
+    }
+    .inpt_cm,.btn_cinco{
+      outline: none;
+      @include desde (web){
+        font-size: 1.3em;
+      }
+    }
   }
 
   & strong{
@@ -48,12 +56,14 @@
   }
   .coment{
     border-top: 1px solid $gris;
-    padding: .8em 0;
+    border-bottom: 1px solid $gris;
+    margin-top: 1em;
     & strong{
       color: $azul-claro
     }
   }
 }
+
 .avth{
   @include hasta(movil){
     display: none
