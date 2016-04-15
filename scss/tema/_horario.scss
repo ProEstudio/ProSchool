@@ -1,0 +1,48 @@
+#horario{
+  border: 1px solid $gris;
+  th {
+    padding: 10px;
+    color: $azul
+  }
+  .namber{
+    padding: 8px;
+    color: $azul-claro
+  }
+  td{
+    color: $gris-oscuro
+  }
+}
+#horario-2{
+  margin-top: 2em;
+  & , th, td {
+    border: 1px solid $gris;
+  }
+  th, td {
+    padding: 25px 0;
+    color: $azul
+  }
+  .bn{
+    background: $blanco
+  }
+  .namber{
+    padding: 10px;
+    background: $azul-claro;
+    color: $blanco;
+    font-size: 1em
+  }
+  th{
+    text-align: center;
+    background: $verde;
+    color: $blanco;
+    font-size: 2em
+  }
+  td{
+    font-size: 1.5em
+  }
+}
+.tra{
+  @include hasta(movil){
+    display: none
+  }
+  border-bottom: 1px solid $gris;
+}

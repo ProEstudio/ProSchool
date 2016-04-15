@@ -95,7 +95,7 @@
   }
   .uno, .dos ,.tres,.cuatro{
     background: $azul-claro;
-    padding: .5em 0;
+    padding: .7em 0;
     @include desde (web){
       font-size: 1.2em
     }
@@ -121,53 +121,7 @@
   }
 }
 
-#horario{
-  border: 1px solid $gris;
-  th {
-    padding: 10px;
-    color: $azul
-  }
-  .namber{
-    padding: 8px;
-    color: $azul-claro
-  }
-  td{
-    color: $gris-oscuro
-  }
-}
-.horario-2{
-  & , th, td {
-    border: 1px solid $gris;
-    border-collapse: collapse;
-  }
-  th, td {
-    padding: 25px 0;
-  }
-  .bn{
-    background: $blanco
-  }
-  .namber{
-    padding: 10px;
-    background: $azul-claro;
-    color: $blanco;
-    font-size: 1em
-  }
-  th{
-    text-align: center;
-    background: $verde;
-    color: $blanco;
-    font-size: 2em
-  }
-  td{
-    font-size: 1.5em
-  }
-}
-.tra{
-  @include hasta(movil){
-    display: none
-  }
-  border-bottom: 1px solid $gris;
-}
+
 .publicacion{
   border: none;
   @include desde (web){

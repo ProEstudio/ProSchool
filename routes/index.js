@@ -27,4 +27,9 @@ router.route('/notas')
     res.render('../views/perfil/estudiante/periodo');
   });
 
+router.route('/horario')
+  .get(function(req,res){
+    res.render('../views/perfil/estudiante/horario');
+  });
+
 module.exports = router;
