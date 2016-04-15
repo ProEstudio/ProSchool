@@ -2866,35 +2866,57 @@ footer .creditos a:hover {
 .regis a {
   margin: .1em .3em; }
 
-.publication {
-  padding: 1em .7em; }
-  .publication a {
-    text-decoration: none; }
-    .publication a strong {
-      color: #0E4C73; }
-  .publication img {
-    border-radius: 50%; }
-  @media screen and (max-width: 479px) {
-    .publication {
-      border-bottom: 1px solid #E1E8ED; } }
-  @media screen and (max-width: 767px) {
-    .publication {
-      font-weight: 300; }
-      .publication .cm_inpt, .publication .btn_cm {
-        display: none; } }
-  @media screen and (min-width: 1024px) {
-    .publication {
-      font-weight: 300;
-      border-bottom: 1px solid #E1E8ED; }
-      .publication .cm_inpt, .publication .btn_cm {
-        display: none; } }
+.publication a {
+  text-decoration: none; }
+  .publication a strong {
+    color: #0E4C73; }
+
+.publication img {
+  border-radius: 50%; }
+
+@media screen and (max-width: 479px) {
+  .publication {
+    border-bottom: 1px solid #E1E8ED;
+    padding: 1em 0 !important;
+    margin: 0; }
+    .publication .pu {
+      padding: 0;
+      padding-left: .5em;
+      margin: 0; } }
+
+@media screen and (max-width: 767px) {
+  .publication {
+    font-weight: 300; }
+    .publication .cm_inpt, .publication .btn_cm {
+      display: none; } }
+
+@media screen and (min-width: 1024px) {
+  .publication {
+    padding: 1em .7em;
+    font-weight: 300;
+    border-bottom: 1px solid #E1E8ED; }
+    .publication .cm_inpt, .publication .btn_cm {
+      display: none; } }
+
+.publication .pth p {
+  padding: .5em 0;
+  font-size: 1.5em; }
 
 .status {
-  margin: 1em .5em; }
+  margin: .3em .5em; }
+  @media screen and (min-width: 1024px) {
+    .status {
+      margin: 1em .5em; } }
   .status .cm_inpt .inpt_cm, .status .btn_cm .inpt_cm {
     padding-left: .6em; }
+    @media screen and (max-width: 479px) {
+      .status .cm_inpt .inpt_cm, .status .btn_cm .inpt_cm {
+        padding: 0; } }
   .status .cm_inpt .inpt_cm, .status .cm_inpt .btn_cinco, .status .btn_cm .inpt_cm, .status .btn_cm .btn_cinco {
     outline: none; }
+    @media screen and (max-width: 479px) {
+      .status .cm_inpt .inpt_cm, .status .cm_inpt .btn_cinco, .status .btn_cm .inpt_cm, .status .btn_cm .btn_cinco {
+        font-size: 1em; } }
     @media screen and (min-width: 1024px) {
       .status .cm_inpt .inpt_cm, .status .cm_inpt .btn_cinco, .status .btn_cm .inpt_cm, .status .btn_cm .btn_cinco {
         font-size: 1.3em; } }
@@ -2904,14 +2926,24 @@ footer .creditos a:hover {
     border-radius: 50%; }
   .status .usern {
     color: #66757F; }
+    @media screen and (min-width: 1024px) {
+      .status .usern {
+        padding: .7em; }
+        .status .usern strong {
+          font-size: 1.5em; } }
   .status .tarea {
     margin: .6em 0; }
   .status .coment {
     border-top: 1px solid #E1E8ED;
-    border-bottom: 1px solid #E1E8ED;
-    margin-top: 1em; }
+    border-bottom: 1px solid #E1E8ED; }
     .status .coment strong {
       color: #35AFBD; }
+    @media screen and (max-width: 479px) {
+      .status .coment {
+        padding: 0; } }
+    @media screen and (min-width: 1024px) {
+      .status .coment {
+        font-size: 1.1em; } }
 
 @media screen and (max-width: 479px) {
   .avth {
@@ -2947,11 +2979,11 @@ footer .creditos a:hover {
   .display {
     display: none; } }
 
-.avatar, .categ, .agc, .publicacion {
+.avatar, .categ, .agc, .publicacion, .contact {
   margin: .3em;
   border: 1px solid #E1E8ED; }
   @media screen and (max-width: 479px) {
-    .avatar, .categ, .agc, .publicacion {
+    .avatar, .categ, .agc, .publicacion, .contact {
       margin: 0;
       border: none;
       border-bottom: 1px solid #E1E8ED; } }
@@ -3107,6 +3139,12 @@ footer .creditos a:hover {
     padding: .3em;
     margin: 0;
     margin-bottom: .8em; }
+
+@media screen and (min-width: 1024px) {
+  .pots {
+    padding: 0 4em; }
+    .pots p {
+      padding-top: .5em; } }
 
 .regest h1 {
   color: #038A72;
@@ -3308,3 +3346,6 @@ footer .creditos a:hover {
   border: none;
   outline: none;
   line-height: 2; }
+
+.notasav img {
+  width: 50%; }

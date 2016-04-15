@@ -1,4 +1,4 @@
-main#home
+main#home(ng-view)
   .ed-container
     .ed-item.no-padding.web-20
       .ed-container
@@ -8,14 +8,15 @@ main#home
           include ../perfil/links
         .ed-item.display.categ.animated.fadeInUp
           include ../perfil/links
-        .ed-item.display.categ.animated.fadeInUp
-          include ../perfil/links
-
     .ed-item.publicacion.no-padding.web-75
       .ed-container
         .ed-item.display.abcenter.no-padding.animated.fadeInUp
           //include ../perfil/periodos
           include ../perfil/horario
-        .ed-item.animated.fadeInUp
+        .ed-item.pots.animated.fadeInUp
           h2.titu.abcenter Tareas a realizar
+          include ./agregar-actividad/publication
+          include ./agregar-actividad/publication
+          include ./agregar-actividad/publication
+          include ./agregar-actividad/publication
           include ./agregar-actividad/publication

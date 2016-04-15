@@ -4,21 +4,27 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res) {
-  res.render('index', { title: 'ProSchool_BETA' });
-});
+router.route('/')
+  .get(function(req,res) {
+    res.render('index', { title: 'ProSchool_BETA' });
+  })
+  .post(function(req, res) {
+    res.render('../views/home', {title: 'Proschool'});
+  });
 
-
-router.post('/',function(req,res){
-  res.render('../views/home', {title: 'Proschool'});
-});
-
-router.get('/home',function(req,res){
+router.route('/home')
+  .get(function(req,res){
   res.render('../views/home',{title: 'Proschool'});
 });
 
-router.get('/buscar',function(req,res){
-  res.render('../views/buscar');
-});
+router.route('/buscar')
+  .get(function(req,res){
+    res.render('../views/buscar');
+  });
+
+router.route('/notas')
+  .get(function(req,res){
+    res.render('../views/perfil/estudiante/periodo');
+  });
 
 module.exports = router;

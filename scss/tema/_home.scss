@@ -1,5 +1,4 @@
 .publication{
-  padding: 1em .7em;
   & a {
     text-decoration: none;
     & strong{
@@ -11,6 +10,13 @@
   }
   @include hasta(movil){
     border-bottom: 1px solid $gris;
+    padding: 1em 0 !important;
+    margin: 0;
+    .pu{
+      padding: 0;
+      padding-left: .5em;
+      margin: 0
+    }
   }
   @include hasta (tablet){
     font-weight: 300;
@@ -19,23 +25,39 @@
     }
   }
   @include desde (web){
+    padding: 1em .7em;
     font-weight: 300;
     border-bottom: 1px solid $gris;
     .cm_inpt , .btn_cm{
       display: none
     }
   }
-
+  .pth{
+    p{
+      padding: .5em 0;
+      font-size: 1.5em;
+    }
+  }
 }
 .status{
-  margin: 1em .5em;
+  margin: .3em .5em;
+  @include desde (web){
+    margin: 1em .5em;
+  }
+
   .cm_inpt , .btn_cm{
     //border-top: 1px solid $gris;
     .inpt_cm{
       padding-left: .6em;
+      @include hasta(movil){
+        padding: 0
+      }
     }
     .inpt_cm,.btn_cinco{
       outline: none;
+      @include hasta(movil){
+        font-size: 1em
+      }
       @include desde (web){
         font-size: 1.3em;
       }
@@ -49,7 +71,13 @@
     border-radius: 50%;
   }
   .usern{
-    color: $gris-oscuro
+    color: $gris-oscuro;
+    @include desde (web){
+      padding: .7em ;
+      strong{
+        font-size: 1.5em
+      }
+    }
   }
   .tarea{
     margin: .6em 0
@@ -57,9 +85,14 @@
   .coment{
     border-top: 1px solid $gris;
     border-bottom: 1px solid $gris;
-    margin-top: 1em;
     & strong{
-      color: $azul-claro
+      color: $azul-claro;
+    }
+    @include hasta(movil){
+      padding: 0
+    }
+    @include desde (web){
+      font-size: 1.1em
     }
   }
 }
