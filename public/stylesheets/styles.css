@@ -2860,6 +2860,18 @@ footer .creditos a:hover {
 .pb {
   background: red; }
 
+.curso {
+  cursor: pointer; }
+  .curso .alto, .curso .medio, .curso .bajo {
+    color: #66757F;
+    transition: .2s all; }
+  .curso .alto:hover {
+    color: #038A72; }
+  .curso .medio:hover {
+    color: #E99804; }
+  .curso .bajo:hover {
+    color: #E95D44; }
+
 .regis h2 {
   color: #038A72; }
 
