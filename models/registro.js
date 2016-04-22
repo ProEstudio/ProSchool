@@ -18,12 +18,9 @@ if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD){
 
 //APLICACION LOCAL
 var userSchema = new Schema({
-  type:String,
-  name:String,
-  lastname:String,
-  username:String,
-  email:String,
-
+  email: String,
+  password: String,
+  token: String
 });
 
 mongoose.connect("mongodb://localhost/ps_user");

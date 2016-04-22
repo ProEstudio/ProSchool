@@ -2778,7 +2778,8 @@ h6 {
       text-align: center; } }
   @media screen and (max-width: 479px) {
     #header {
-      display: none; } }
+      padding: 0;
+      margin: 0; } }
 
 @media screen and (min-width: 1024px) {
   #headerlg {
@@ -2791,7 +2792,7 @@ h6 {
   font-size: 2.5em; }
 
 .ed-menu a {
-  line-height: 1.9;
+  line-height: 1.5;
   color: #66757F;
   text-decoration: none;
   font-weight: 400; }
@@ -2800,11 +2801,11 @@ h6 {
     transition: all .2s; }
 
 @media screen and (max-width: 1023px) {
-  .buscar, .menu {
+  .buscar, .menu, .logo {
     display: none; } }
 
 .menu a {
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-weight: 500; }
 
 footer .creditos p, footer .creditos a {
@@ -2882,6 +2883,9 @@ footer .creditos a:hover {
   text-decoration: none; }
   .publication a strong {
     color: #0E4C73; }
+    @media screen and (min-width: 1024px) {
+      .publication a strong {
+        font-size: 1.1em; } }
 
 .publication img {
   border-radius: 50%; }
@@ -2963,7 +2967,6 @@ footer .creditos a:hover {
 
 #homeft {
   color: #FAFAFA;
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
   padding: 0; }
   #homeft a {
     color: #66757F;
@@ -2973,22 +2976,43 @@ footer .creditos a:hover {
     padding: .5em; }
     #homeft a:hover {
       color: #35AFBD; }
-  @media screen and (min-width: 1024px) {
+  @media screen and (max-width: 1023px) {
     #homeft {
-      display: none; } }
+      border: none;
+      padding: 0;
+      margin: 0; } }
 
-.homeft, .buscarft, .mensajeft, .perfilft {
+.homeft, .buscarft, .mensajeft, .perfilft, .bellft {
   padding: 1em;
   font-size: .8em; }
-  .homeft:hover, .buscarft:hover, .mensajeft:hover, .perfilft:hover {
+  .homeft:hover, .buscarft:hover, .mensajeft:hover, .perfilft:hover, .bellft:hover {
     color: #35AFBD;
     transition: all .60s; }
+  @media screen and (min-width: 1024px) {
+    .homeft, .buscarft, .mensajeft, .perfilft, .bellft {
+      padding: 0;
+      margin: 0; } }
 
-#homeft {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
+@media screen and (min-width: 1024px) {
+  .buscarft {
+    display: none; } }
+
+@media screen and (max-width: 1023px) {
+  .bellft {
+    display: none; } }
+
+.perfilft img {
+  border-radius: 50%; }
+  @media screen and (max-width: 1023px) {
+    .perfilft img {
+      display: none; } }
 
 @media screen and (max-width: 479px) {
   .display {
+    display: none; } }
+
+@media screen and (min-width: 1024px) {
+  .display-2 {
     display: none; } }
 
 .avatar, .categ, .agc, .publicacion, .contact {

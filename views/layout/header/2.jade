@@ -3,14 +3,17 @@ header#header
     .ed-item.web-20.logo
       //img(src="/img/logo.png").logo
       a(href="/home") ProSchool
-    .ed-item.web-60.buscar
+    .ed-item.web-55.buscar
       .ed-container
         .ed-item.web-90.sch_inpt
           input.inpt_sch.base-100(type="text" placeholder='Buscar')
         .ed-item.web-10.sch_btn
-          button.base-100.button.btn_tres(type='submit').lnr.lnr-magnifier
-    .ed-item.web-20.menu
+          button.base-100.button.btn_tres(type='submit').ion-ios-search
+    .ed-item.no-padding.web-20
+      include ../navbar
+
+    //.ed-item.web-20.menu
       ul.ed-menu.web-horizontal.abcenter
-        li: a.hro(href="/horario").ion-ios-calendar-outline
+        li: a.hro(href="/horario").ion-android-notifications-none
         li: a(href="#").ion-ios-chatboxes-outline
         li: a(href="/users").ion-android-person

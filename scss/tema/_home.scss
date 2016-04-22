@@ -2,7 +2,10 @@
   & a {
     text-decoration: none;
     & strong{
-      color: $azul
+      color: $azul;
+      @include desde (web){
+        font-size: 1.1em
+      }
     }
   }
   & img{
@@ -115,25 +118,55 @@
       color: $azul-claro;
     }
   }
-  border-top: 1px solid rgba(0,0,0,0.15);
   padding:0;
-  @include desde(web){
-    display: none
+  @include hasta (web){
+    //display: none
+    border: none;
+    padding: 0;
+    margin: 0;
   }
 }
-.homeft , .buscarft, .mensajeft , .perfilft{
+.homeft , .buscarft, .mensajeft , .perfilft , .bellft{
   padding: 1em;
   font-size: .8em;
   &:hover{
     color:$azul-claro;
     transition: all .60s
   }
+  @include desde (web){
+    padding: 0;
+    margin: 0;
+  }
 }
-#homeft{
-  border-bottom: 1px solid rgba(0,0,0,0.15);
+.buscarft{
+  @include desde (web){
+    display: none
+  }
 }
+
+.bellft{
+  @include hasta (web){
+    display: none
+  }
+}
+
+.perfilft{
+  img{
+    border-radius: 50%;
+    @include hasta (web){
+      display: none
+    }
+  }
+}
+
 .display{
   @include hasta(movil){
+    display: none
+  }
+}
+
+.display-2{
+  @include desde (web){
     display: none
   }
 }

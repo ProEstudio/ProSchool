@@ -3,6 +3,7 @@ angular.module('Proschool',[])
 
   //Comentarios
   $scope.user = {
+    type:'Alumno',
     name: 'Jair Perez',
     username: 'jairperezs',
     pots:['Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia esse, reprehenderit mollitia iusto consequuntur','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia esse, reprehenderit mollitia iusto consequuntur']

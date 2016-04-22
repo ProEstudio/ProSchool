@@ -1,5 +1,6 @@
 /* jshint node: true */
 
+var User = require('../models/registro');
 var express = require('express');
 var router = express.Router();
 
@@ -9,7 +10,11 @@ router.route('/')
     res.render('index', { title: 'ProSchool_BETA' });
   })
   .post(function(req, res) {
-    res.render('../views/home', {title: 'Proschool'});
+    User.findOne({username:req.body.user,password:req.body.pass},function(err,user){
+      req.session.user_id = user._id;
+      res.redirect('/home');
+    });
+    //res.render('../views/home', {title: 'Proschool'});
   });
 
 router.route('/home')

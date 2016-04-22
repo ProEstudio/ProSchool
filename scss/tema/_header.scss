@@ -21,7 +21,8 @@
   //box-shadow: 1px 1px 1px #888888;
   margin-bottom: .5em;
   @include hasta(movil){
-    display: none
+    padding: 0;
+    margin: 0;
   }
   @include desde (web){
   }
@@ -40,7 +41,7 @@
   }
 }
 .ed-menu a{
-  line-height: 1.9;
+  line-height: 1.5;
   color: $gris-oscuro;
   text-decoration: none;
   font-weight: 400;
@@ -49,14 +50,14 @@
     transition: all .2s
   }
 }
-.buscar ,  .menu{
+.buscar ,  .menu , .logo{
   @include hasta(web){
     display: none;
   }
 }
 .menu{
   & a{
-    font-size: 1.2em;
+    font-size: 1.4em;
     font-weight: 500
   }
 }

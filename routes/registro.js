@@ -15,11 +15,12 @@ router.route('/estudiante')
   })
   .post(function(req, res) {
     var data = {
-      type:'estudent',
+      type:'Alumno',
       name:'jair',
       lastname:'perez oquendo',
       username:'jairperezs',
       email:'jair.perez@outlook.com',
+      password:'d1e560'
     };
 
     var estudent = new User(data);
