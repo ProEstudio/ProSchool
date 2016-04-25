@@ -1,0 +1,11 @@
+extends ../layout/layout
+block contenido
+  .ed-container
+    .ed-item.user
+      h2 Usuarios
+      h4 Datos de usuarios
+      each dato in datos
+        p= dato.name
+        p= dato.lastname
+        p= dato.user
+        p= dato.email

@@ -1,0 +1,172 @@
+.publication{
+  & a {
+    text-decoration: none;
+    & strong{
+      color: $azul;
+      @include desde (web){
+        font-size: 1.1em
+      }
+    }
+  }
+  & img{
+    border-radius: 50%;
+  }
+  @include hasta(movil){
+    border-bottom: 1px solid $gris;
+    padding: 1em 0 !important;
+    margin: 0;
+    .pu{
+      padding: 0;
+      padding-left: .5em;
+      margin: 0
+    }
+  }
+  @include hasta (tablet){
+    font-weight: 300;
+    .cm_inpt , .btn_cm{
+      display: none
+    }
+  }
+  @include desde (web){
+    padding: 1em .7em;
+    font-weight: 300;
+    border-bottom: 1px solid $gris;
+    .cm_inpt , .btn_cm{
+      display: none
+    }
+  }
+}
+.pth{
+  p{
+    padding: .4em 0;
+    font-size: 1.4em;
+  }
+}
+.status{
+  margin: .3em .5em;
+  @include desde (web){
+    margin: 1em .5em;
+  }
+
+  .cm_inpt , .btn_cm{
+    //border-top: 1px solid $gris;
+    .inpt_cm{
+      padding-left: .6em;
+      @include hasta(movil){
+        padding: 0
+      }
+    }
+    .inpt_cm,.btn_cinco{
+      outline: none;
+      @include hasta(movil){
+        font-size: 1em
+      }
+      @include desde (web){
+        font-size: 1.3em;
+      }
+    }
+  }
+
+  & strong{
+      color: $azul
+    }
+  & img{
+    border-radius: 50%;
+  }
+  .usern{
+    color: $gris-oscuro;
+    @include desde (web){
+      padding: .7em ;
+      strong{
+        font-size: 1.5em
+      }
+    }
+  }
+  .tarea{
+    margin: .6em 0
+  }
+  .coment{
+    border-top: 1px solid $gris;
+    border-bottom: 1px solid $gris;
+    & strong{
+      color: $azul-claro;
+    }
+    @include hasta(movil){
+      padding: 0
+    }
+    @include desde (web){
+      font-size: 1.1em
+    }
+  }
+}
+
+.avth{
+  @include hasta(movil){
+    display: none
+  }
+}
+
+#homeft{
+  color: $blanco;
+  & a {
+    color: $gris-oscuro;
+    font-weight: 500;
+    font-size: 2em;
+    text-decoration: none;
+    padding: .5em;
+    &:hover{
+      color: $azul-claro;
+    }
+  }
+  padding:0;
+  @include hasta (web){
+    //display: none
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+.homeft , .buscarft, .mensajeft , .perfilft , .bellft{
+  padding: 1em;
+  font-size: .8em;
+  &:hover{
+    color:$azul-claro;
+    transition: all .60s
+  }
+  @include desde (web){
+    padding: 0;
+    margin: 0;
+  }
+}
+.buscarft{
+  @include desde (web){
+    display: none
+  }
+}
+
+.bellft{
+  @include hasta (web){
+    display: none
+  }
+}
+
+.perfilft{
+  img{
+    border-radius: 50%;
+    @include hasta (web){
+      display: none
+    }
+  }
+}
+
+.display{
+  @include hasta(movil){
+    display: none
+  }
+}
+
+.display-2{
+  @include desde (web){
+    display: none
+  }
+}

@@ -1,0 +1,165 @@
+.avatar , .categ , .agc , .publicacion , .contact{
+  margin: .3em;
+  border: 1px solid $gris;
+  @include hasta(movil){
+    margin:0;
+    border: none;
+    border-bottom: 1px solid $gris;
+  }
+}
+.avatar , .avatar-1, .avatar-2,.avatar-3{
+  padding: 1em;
+  img{
+    border: 1px solid $gris;
+  }
+  color: $verde;
+  & img{
+    border-radius: 50%
+  }
+  & h3{
+    color: $azul;
+  }
+  & span{
+    color: $azul-claro
+  }
+}
+.avatar-2{
+  & img{
+    margin:.3em
+  }
+}
+.avatar-3{
+  padding: .5em 0
+}
+.categ{
+
+  & h4{
+    color: $verde
+  }
+
+}
+.contact{
+  & h4 {
+    color: $blanco;
+    background: $verde;
+    font-weight: 300;
+    padding: .3em;
+    margin: 0 .8em;
+    margin-bottom: .7em;
+  }
+}
+.estado{
+  & h3{
+    color: $azul
+  }
+  .acti{
+    padding: .5em 0;
+    .inpt{
+      padding: .4em;
+      border: 1px solid $verde;
+      color: $verde
+    }
+    .btn_env{
+      background: $verde;
+      color:$blanco;
+      border: none;
+      margin: auto 0
+    }
+  }
+}
+//PADRE
+.actipadre, .escuela, .profesores {
+  & h3 {
+    color: $verde
+  }
+  & h4{
+    color: $azul
+  }
+  & p{
+    color: $azul-claro
+  }
+}
+.ph{
+  @include hasta(movil){
+    padding: 0
+  }
+}
+.periodo{
+  background: $azul;
+  & h3{
+    color: $blanco;
+    @include desde(web){
+      font-weight: 400;
+      font-size: 2em
+    }
+  }
+  .uno, .dos ,.tres,.cuatro{
+    background: $azul-claro;
+    padding: .7em 0;
+    @include desde (web){
+      font-size: 1.2em
+    }
+    &:hover{
+      background: $azul;
+      transition: all .2s
+    }
+    & a{
+      color: $blanco;
+    }
+  }
+  .uno{
+    background: $alto
+  }
+  .dos{
+    background: $medio
+  }
+  .tres{
+    background: $bajo
+  }
+  .cuatro{
+    background: $bajo
+  }
+}
+
+
+.publicacion{
+  border: none;
+  @include desde (web){
+    & h2 {
+      margin-top: 3em
+    }
+  }
+}
+.categ{
+  padding: .8em;
+  & a {
+    & h4{
+      //background: $verde;
+      padding: .3em;
+      margin: 0;
+      font-weight: 400;
+      &:hover{
+        background: $gris;
+        color: $azul;
+        border-right: 2px solid $azul;
+        transition: .4s all
+      }
+    }
+  }
+  .tituinf{
+    background: $verde;
+    color: $blanco !important;
+    font-weight: 300;
+    padding: .3em;
+    margin: 0;
+    margin-bottom: .8em
+  }
+}
+.pots{
+  @include desde (web){
+    padding: 0 4em;
+    p{
+      padding-top: .5em
+    }
+  }
+}

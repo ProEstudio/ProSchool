@@ -1,0 +1,53 @@
+//BOTONES
+.button{
+  font-size: 15px;
+  &.btn_uno{
+    @include button($verde,$blanco,radius);
+    border: none;
+  }
+  &.btn_dos{
+    @include button($blanco,$azul-claro,radius);
+    border: 1px solid $azul-claro;
+  }
+  &.btn_tres{
+    @include button($blanco,$gris-oscuro);
+    border:none;
+    border-right: 1px solid $gris;
+    border-top: 1px solid $gris;
+    border-bottom: 1px solid $gris;
+    outline: none;
+    @include hasta(movil){
+      margin: 0;
+      line-height: 2.1;
+      font-weight: 600;
+      &:hover{
+        background: $azul-claro;
+        color: $blanco
+      }
+    }
+    @include desde (web){
+      margin: 0;
+      line-height: 2.1;
+      font-weight: 600;
+      &:hover{
+        background: $azul-claro;
+        color: $blanco
+      }
+    }
+  }
+  &.btn_cuatro{
+    @include button($blanco,$verde);
+    border:none;
+    border-right: 1px solid $gris;
+    border-top: 1px solid $gris;
+    border-bottom: 1px solid $gris;
+  }
+  &.btn_cinco{
+    @include button($blanco,$verde);
+    line-height: 2;
+    border:none;
+    &:hover{
+      background: $blanco;
+    }
+  }
+}
