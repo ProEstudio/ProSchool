@@ -1,0 +1,38 @@
+extends ../layout/layout
+block contenido
+  table.table
+    thead.abcenter
+      tr
+        th.abcenter #
+        th.abcenter Nombre y Apellido
+        th.abcenter Usuario
+        th.abcenter Email
+        th.abcenter Contraseña
+        th.abcenter Acciones
+    tbody
+      each dato in datos
+        tr
+          td.abcenter= dato.id
+          td.abcenter= dato.name + " " + dato.lastname
+          td.abcenter= dato.user
+          td.abcenter= dato.email
+          td.abcenter= dato.pass
+          td.abcenter
+            a(href="/registro/edit/#{dato.id}") Editar
+            = " - "
+            a(href="#") Eliminar
+  table.table-movil.base-100
+    thead
+      tr
+        th.abcenter Nombre y Apellido
+        th.abcenter Usuario
+        th.abcenter Acciones
+    tbody
+      each dato in datos
+        tr
+          td.abcenter= dato.name + " " + dato.lastname
+          td.abcenter= dato.user
+          td.abcenter
+            a(href="/registro/edit/#{dato.id}") Editar
+            = " - "
+            a(href="#") Eliminar

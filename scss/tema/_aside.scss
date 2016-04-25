@@ -1,0 +1,24 @@
+.curso{
+  cursor: pointer;
+  .alto , .medio , .bajo{
+    color: $gris-oscuro;
+    transition: .2s all
+  }
+  .alto{
+    &:hover{
+      color: $alto
+    }
+  }
+
+  .medio{
+    &:hover{
+      color: $medio
+    }
+  }
+
+  .bajo{
+    &:hover{
+      color: $bajo
+    }
+  }
+}

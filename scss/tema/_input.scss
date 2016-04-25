@@ -1,0 +1,36 @@
+.sch_inpt{
+  padding: 0 0 0 .5em;
+  @include desde(web){
+    padding: 0
+  }
+}
+.sch_btn{
+  padding: 0 .5em 0 0;
+  @include desde(web){
+    padding: 0
+  }
+}
+
+.act_inpt{
+  padding: 0 0 0 1em;
+}
+.act_btn{
+  padding: 0 .5em 0 0;
+}
+
+.inpt_sch{
+  padding:.6em;
+  border:none;
+  border-left: 1px solid $gris;
+  border-top: 1px solid $gris;
+  border-bottom: 1px solid $gris;
+  outline: none;
+  @include desde(web){
+    padding:.6em .8em;
+  }
+}
+.inpt_cm{
+  border: none;
+  outline: none;
+  line-height: 2
+}

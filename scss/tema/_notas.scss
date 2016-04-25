@@ -1,0 +1,40 @@
+.notasav{
+  & img{
+    @include desde (web){
+      width: 15%
+    }
+  }
+}
+.curso{
+  border: 1px solid $gris;
+  padding: .5em .8em;
+  @include hasta(movil){
+    margin: .2em .8em;
+  }
+  @include desde (web){
+    margin: .3em;
+  }
+  & h3, & p{
+    margin: 0;
+    padding: .2em;
+  }
+  p{
+    color: $alto;
+    font-size: 1.1em
+  }
+}
+.titunta{
+  padding: 1em .8em;
+  @include hasta(movil){
+    h4{
+      padding: .3em;
+      margin: 0;
+      background: $azul;
+      color: $blanco;
+      font-weight: 300
+    }
+  }
+  @include desde (web){
+    display: none
+  }
+}

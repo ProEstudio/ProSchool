@@ -1,0 +1,63 @@
+#header{
+  padding: .5em ;
+  .logo{
+    a{
+      color: $azul;
+      font-family:'pacifico', cursive;
+      padding: 0;
+      margin: 0;
+      font-weight: 200;
+      font-size: 1.5em;
+      text-decoration: none;
+      @include desde (web){
+        line-height: 1.3;
+      }
+    }
+   @include hasta(web){
+      text-align: center;
+    }
+  }
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+  //box-shadow: 1px 1px 1px #888888;
+  margin-bottom: .5em;
+  @include hasta(movil){
+    padding: 0;
+    margin: 0;
+  }
+  @include desde (web){
+  }
+}
+#headerlg{
+  @include desde (web){
+    margin: 1.5em 0;
+  }
+  .logolg{
+    a{
+      color: $azul;
+      font-family:'pacifico', cursive;
+      text-decoration: none;
+      font-size: 2.5em;
+    }
+  }
+}
+.ed-menu a{
+  line-height: 1.5;
+  color: $gris-oscuro;
+  text-decoration: none;
+  font-weight: 400;
+  &:hover{
+    color: $verde;
+    transition: all .2s
+  }
+}
+.buscar ,  .menu , .logo{
+  @include hasta(web){
+    display: none;
+  }
+}
+.menu{
+  & a{
+    font-size: 1.4em;
+    font-weight: 500
+  }
+}
