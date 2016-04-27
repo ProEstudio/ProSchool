@@ -1,22 +1,21 @@
 /* jshint node: true */
 
 //Dependecias
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var session = require('express-session');
-var session_middleware = require('./middleware/session');
+var express = require('express'),
+app = express(),
+path = require('path'),
+favicon  = require('serve-favicon'),
+logger = require('morgan'),
+cookieParser = require('cookie-parser'),
+bodyParser = require('body-parser'),
+//var jwt     = require("jsonwebtoken");
+methodOverride = require("method-override"),
 
-//Routes
-var routes = require('./routes/index');
-var users = require('./routes/users');
-var admin = require('./routes/admin');
-var registro = require('./routes/registro');
+//Dependecias para las Routes
+login = require('./routes/login'),
+routes = require('./routes/index'),
+user = require('./routes/api');
 
-var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -29,17 +28,18 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({
-  secret: '123asdkajsdash',
-  resave: false,
-  saveUninitialized: false
-}));
+app.use(methodOverride());
+app.use(function(req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
+  next();
+});
 
-app.use('/', routes);
-app.use('/users', session_middleware);
-app.use('/users', users);
-app.use('/admin', admin);
-app.use('/registro', registro);
+//Routes
+app.use('/login', login);
+app.use(routes);
+app.use('/api', user);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

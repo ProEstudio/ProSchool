@@ -1,4 +1,4 @@
-angular.module('Proschool',[])
+/**angular.module('Proschool',[])
 .controller('PSController',function($scope){
 
   //Comentarios
@@ -19,3 +19,4 @@ angular.module('Proschool',[])
     };
   };
 });
+**/

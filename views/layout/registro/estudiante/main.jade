@@ -1,19 +1,19 @@
 main#main
   .ed-container
     .ed-item.regest.no-padding
-      form(action="/registro/estudiante" method="post" enctype="multipart/form-data")
+      form
         .ed-container
           .ed-item.abcenter
             h1.animated.fadeInLeft Datos Del Estudiante
           .ed-item.inpt_d.base-50.main-end
-            input.base-100.input.inpt_rg.animated.fadeInUp(type="text" name="nombre" placeholder="Nombre")
+            input.base-100.input.inpt_rg.animated.fadeInUp(type="text" placeholder="Nombre" ng-model="formData.name")
           .ed-item.inpt_d.base-50
-            input.base-100.inpt_rg.input.animated.fadeInUp(type="text" name="apellido" placeholder="Apellido")
+            input.base-100.inpt_rg.input.animated.fadeInUp(type="text" placeholder="Apellido" ng-model="formData.lastname")
           .ed-item.abcenter.inpt
-            input.input.inpt_rg.base-100.animated.fadeInUp(type="text" name="usuario" placeholder="Nombre de Usuario")
+            input.input.inpt_rg.base-100.animated.fadeInUp(type="text" placeholder="Nombre de Usuario" ng-model="formData.username")
           .ed-item.abcenter.inpt
-            input.input.inpt_rg.base-100.animated.fadeInUp(type="text" name="correo" placeholder="Correo Electronico (Opcional)")
+            input.input.inpt_rg.base-100.animated.fadeInUp(type="text" placeholder="Correo Electronico (Opcional)" ng-model="formData.email" )
           .ed-item.abcenter.inpt
-            input.input.inpt_rg.base-100.animated.fadeInUp(type="password" name="contraseña" placeholder="Contraseña")
+            input.input.inpt_rg.base-100.animated.fadeInUp(type="password" placeholder="Contraseña" ng-model="formData.password")
           .ed-item.btn.tablet-75.web-70.main-end
-            input.animated.fadeInUp.button.btn_uno(type="submit" value="Registrar")
+            button.animated.fadeInUp.button.btn_uno(ng-click="createUser()") Registar

@@ -1,0 +1,12 @@
+main#main
+  .ed-container.animated.fadeIn.abcenter
+    .ed-item.base-80.tablet-35.web-25
+      form(action="/login" method="post")
+        input.base-100.input.inpt_lg(type="text" name="user" placeholder="Correo / Usuario")
+        input.base-100.input.inpt_lg(type="password" name="pass" placeholder="Contraseña")
+        input.base-100.button.btn_uno(type="submit" value="Iniciar Sesión")
+    //.ed-item.regis.abcenter
+      h2 Registrarse
+      a.button.btn_dos(href="/registro/profesor") Profesor
+      a.button.btn_dos(href="/registro/padre") Padre
+      a.button.btn_dos(href="/registro/estudiante") Estudiante

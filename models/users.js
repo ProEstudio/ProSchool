@@ -18,7 +18,10 @@ if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD){
 
 //APLICACION LOCAL
 var userSchema = new Schema({
+  name:String,
+  lastname:String,
   email: String,
+  username: String,
   password: String,
   token: String
 });
