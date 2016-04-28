@@ -1,6 +1,8 @@
 /* jshint node: true */
 
 var User = require('../models/users');
+var service = require('./service');
+
 
 //GET - Return all Users in the DB
 exports.findAllUsers = function(req, res) {
@@ -8,8 +10,9 @@ exports.findAllUsers = function(req, res) {
     if (err){
       res.send(500, err.message);
     }
-    console.log('GET /users');
-    res.status(200).json(user); // return all todos in JSON format
+    return res
+            .status(200)
+            .send({token: service.createToken(user)}); // return all todos in JSON format
   });
 };
 
@@ -20,14 +23,14 @@ exports.findById = function(req, res) {
       return res.send(500, err.message);
     }
     console.log('GET /user/' + req.params.id);
-    res.status(200).json(user);
+    return res
+            .status(200)
+            .send({token: service.createToken(user)});
   });
 };
 
 //POST - Insert a new User in the DB
 exports.addUser= function(req, res) {
-  console.log('POST');
-  console.log(req.body);
 
   var data = {
     name: req.body.name,
@@ -43,7 +46,9 @@ exports.addUser= function(req, res) {
     if(err) {
       return res.status(500).send( err.message);
     }
-    res.status(200).json(user);
+    return res
+            .status(200)
+            .send({token: service.createToken(user)});
   });
 };
 
@@ -65,7 +70,7 @@ exports.updateUser = function(req, res) {
   });
 };
 
-//DELETE - Delete a TVShow with specified ID
+//DELETE - Delete a User with specified ID
 exports.deleteUser = function(req, res) {
   User.findById(req.params.id, function(err, user) {
     user.remove(function(err) {
@@ -74,5 +79,17 @@ exports.deleteUser = function(req, res) {
       }
       res.status(200).send();
     });
+  });
+};
+
+//Auth - login
+exports.userLogin = function(req, res) {
+  User.findOne({username: req.body.username.toLowerCase()}, function(err, user) {
+    // Comprobar si hay errores
+    // Si el usuario existe o no
+    // Y si la contraseña es correcta
+    return res
+        .status(200)
+        .send({token: service.createToken(user)});
   });
 };

@@ -8,14 +8,13 @@ favicon  = require('serve-favicon'),
 logger = require('morgan'),
 cookieParser = require('cookie-parser'),
 bodyParser = require('body-parser'),
-//var jwt     = require("jsonwebtoken");
+cors = require('cors'),
 methodOverride = require("method-override"),
 
 //Dependecias para las Routes
-login = require('./routes/login'),
 routes = require('./routes/index'),
-user = require('./routes/api');
-
+user = require('./routes/api'),
+middleware  = require('./middleware/Authenticated');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -29,17 +28,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride());
-app.use(function(req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
-  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
-  next();
-});
+app.use(cors());
 
 //Routes
-app.use('/login', login);
 app.use(routes);
-app.use('/api', user);
+app.use('/api' ,middleware.ensureAuthenticated, user);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -12,4 +12,7 @@ router.route('/user/:id')
   .put(UserCtrl.updateUser)
   .delete(UserCtrl.deleteUser);
 
+router.route('/auth')
+  .post(UserCtrl.userLogin);
+
 module.exports = router;

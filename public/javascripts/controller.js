@@ -1,3 +1,12 @@
+angular
+    .module("Proschool_v0.6", ["satellizer"])
+    .config(function($authProvider) {
+        // Parametros de configuración
+        $authProvider.loginUrl = "/api/auth/login";
+        $authProvider.signupUrl = "/api/auth/signup";
+        $authProvider.tokenName = "token";
+        $authProvider.tokenPrefix = "Proschool_v0.6";
+    });
 /**angular.module('Proschool',[])
 .controller('PSController',function($scope){
 

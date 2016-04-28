@@ -2,14 +2,11 @@
 
 var express = require('express');
 var router = express.Router();
+var UserCtrl  = require('../controllers/users');
 
 /* GET home page. */
-router.route('/')
-  .get(function(req,res) {
-    res.render('index', { title: 'ProSchool_BETA' });
-  })
-  .post(function(req, res) {
-    res.send('Hola Jair');
-  });
+router.route('/' )
+  .get(UserCtrl.findAllUsers)
+  .post(UserCtrl.addUser);
 
 module.exports = router;
