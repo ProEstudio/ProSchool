@@ -1,8 +1,9 @@
 doctype html
-html(lang="es" ng-app='Proschool')
+html(lang="es" ng-app='FinalApp')
   include head
-  body(ng-controller='PSController')
+  body()
     include ./header/1
-    block contenido
+    ed-container
+      ed-item(ng-view)
     include footer
     include scripts

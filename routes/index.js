@@ -2,11 +2,17 @@
 
 var express = require('express');
 var router = express.Router();
-var UserCtrl  = require('../controllers/users');
 
 /* GET home page. */
 router.route('/' )
-  .get(UserCtrl.findAllUsers)
-  .post(UserCtrl.addUser);
+  .get(function(req,res){
+    res.render('../views/layout/layout');
+  });
+
+router.route('/:name' )
+  .get(function(req,res){
+    var name = req.params.name;
+    res.render('../views/' + name);
+  });
 
 module.exports = router;
