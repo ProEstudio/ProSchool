@@ -1,8 +1,8 @@
-angular.module("FinalApp",["lumx","ngRoute"])
-.config(function($routeProvider){
-  $routeProvider
-    .when('/',{
-      controller:'MainController',
-      templateUrl:'views/layout/login'
-    });
+angular.module("FinalApp",["ngRoute"])
+.config(function($routeProvider,$locationProvider){
+  $routeProvider.
+      when('/', {
+        templateUrl: 'partials/index',
+        controller: IndexCtrl
+      })
 });

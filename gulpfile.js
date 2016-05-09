@@ -31,7 +31,7 @@ gulp.task('sass', function () {
 gulp.task('browser-sync', ['nodemon'], function () {
   browserSync.init(null, {
     proxy: "http://localhost:8080",
-    files: ["public/**/*.*","views/**/*.jade","routes/**/*.js","javascripts/**/*.js"],
+    files: ["public/**/*.*","server/**/*.jade","routes/**/*.js","javascripts/**/*.js"],
     browser: "chrome",
     port: 7000,
   });

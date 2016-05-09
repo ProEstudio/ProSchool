@@ -2,17 +2,19 @@
 
 var express = require('express');
 var router = express.Router();
+var IndexCtrl  = require('../controllers/index');
 
 /* GET home page. */
-router.route('/' )
+/*router.route('/views/*')
   .get(function(req,res){
-    res.render('../views/layout/layout');
+    res.render('../../public/views/' + req.params);
   });
+router.route('*')
+  .get(function(req,res){
+    res.render('index');
+  });*/
 
-router.route('/:name' )
-  .get(function(req,res){
-    var name = req.params.name;
-    res.render('../views/' + name);
-  });
+router.route('/')
+  .get(IndexCtrl.index);
 
 module.exports = router;
