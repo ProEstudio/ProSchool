@@ -3,6 +3,7 @@
 var express = require('express');
 var router = express.Router();
 var IndexCtrl  = require('../controllers/index');
+var UserCtrl  = require('../controllers/users');
 
 /* GET home page. */
 /*router.route('/views/*')
@@ -15,6 +16,10 @@ router.route('*')
   });*/
 
 router.route('/')
-  .get(IndexCtrl.index);
+  .get(IndexCtrl.index)
+  .post(UserCtrl.userLogin);
+
+router.route('/login')
+  .get(IndexCtrl.login);
 
 module.exports = router;

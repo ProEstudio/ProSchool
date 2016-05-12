@@ -16,7 +16,7 @@ angular
             })
             .state("login", {
                 url: "/login",
-                templateUrl: "views/login",
+                templateUrl: "server/views/login",
                 controller: "LoginController",
                 controllerAs: "login"
             })

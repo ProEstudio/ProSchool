@@ -3,7 +3,6 @@
 var User = require('../models/users');
 var service = require('./service');
 
-
 //GET - Return all Users in the DB
 exports.findAllUsers = function(req, res) {
   User.find(function(err, user) {
@@ -12,7 +11,8 @@ exports.findAllUsers = function(req, res) {
     }
     return res
             .status(200)
-            .send({token: service.createToken(user)}); // return all todos in JSON format
+            //.send({token: service.createToken(user)}); // return all todos in JSON format
+            .send({user:user});
   });
 };
 
@@ -84,12 +84,26 @@ exports.deleteUser = function(req, res) {
 
 //Auth - login
 exports.userLogin = function(req, res) {
-  User.findOne({username: req.body.username.toLowerCase()}, function(err, user) {
-    // Comprobar si hay errores
-    // Si el usuario existe o no
-    // Y si la contraseña es correcta
-    return res
+  User.findOne({email: req.body.email, password: req.body.password}, function(err, user) {
+    if (err) {
+            res.json({
+                type: false,
+                data: "Error occured: " + err
+            });
+        } else {
+            if (user) {
+               res.json({
+                    data: user
+                });
+            } else {
+                res.json({
+                    type: false,
+                    data: "Incorrect email/password"
+                });
+            }
+        }
+    /*return res
         .status(200)
-        .send({token: service.createToken(user)});
+        .send({token: service.createToken(user)});*/
   });
 };

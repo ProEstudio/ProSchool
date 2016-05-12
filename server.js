@@ -13,8 +13,8 @@ methodOverride = require("method-override"),
 
 //Dependecias para las Routes
 routes = require('./routes/index'),
-user = require('./routes/api'),
-middleware  = require('./middleware/Authenticated');
+user = require('./routes/api');
+//middleware  = require('./middleware/Authenticated');
 
 // view engine setup
 app.set('views', __dirname + '/server/views');
@@ -32,7 +32,7 @@ app.use(cors());
 
 //Routes
 app.use(routes);
-app.use('/api' ,middleware.ensureAuthenticated, user);
+app.use('/api' , user);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
