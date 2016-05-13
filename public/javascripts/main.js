@@ -1,6 +1,14 @@
-angular.module('Proschool_v0.6', [])
+angular.module('Proschool_v0.6', ["satellizer"])
 
-  .controller('PSController',function($scope,$http){
+  .config(function($authProvider) {
+        // Parametros de configuración
+        $authProvider.loginUrl = "http://api.com/auth/login";
+        $authProvider.signupUrl = "http://api.com/auth/signup";
+        $authProvider.tokenName = "token";
+        $authProvider.tokenPrefix = "myApp";
+    })
+
+  .controller('PSCtrl',function($scope,$http){
 
     $scope.formData = {};
 
@@ -38,4 +46,17 @@ angular.module('Proschool_v0.6', [])
             console.log('Error:' + data);
         });
     };
+
+    $scope.loginUser = function(){
+      $http.post('/api/auth', $scope.formData)
+        .success(function(data) {
+            $scope.formData = {};
+            $scope.users = data;
+            console.log(data);
+        })
+        .error(function(data) {
+            console.log('Error:' + data);
+        });
+    };
+
   });

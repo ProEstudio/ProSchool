@@ -2781,15 +2781,13 @@ h6 {
       padding: 0;
       margin: 0; } }
 
-@media screen and (min-width: 1024px) {
-  #headerlg {
-    margin: 1.5em 0; } }
-
-#headerlg .logolg a {
-  color: #0E4C73;
-  font-family: 'pacifico', cursive;
-  text-decoration: none;
-  font-size: 2.5em; }
+#headerlg .logolg {
+  margin-top: 1.5em; }
+  #headerlg .logolg a {
+    color: #0E4C73;
+    font-family: 'pacifico', cursive;
+    text-decoration: none;
+    font-size: 2.5em; }
 
 .ed-menu a {
   line-height: 1.5;
@@ -2873,11 +2871,10 @@ footer .creditos a:hover {
   .curso .bajo:hover {
     color: #E95D44; }
 
-.regis h2 {
-  color: #038A72; }
-
-.regis a {
-  margin: .1em .3em; }
+.lg_rg {
+  margin: 1.5em; }
+  .lg_rg a {
+    color: #038A72; }
 
 .publication a {
   text-decoration: none; }
@@ -3142,8 +3139,11 @@ footer .creditos a:hover {
 
 .regest h1 {
   color: #038A72;
-  font-weight: 400;
-  font-size: 30px; }
+  font-weight: 400; }
+
+@icnlude desde tablet {
+  .regest h1 {
+    font-size: 2.5em; } }
 
 .regest .button.btn_rg {
   display: inline-block;
@@ -3160,6 +3160,9 @@ footer .creditos a:hover {
   .regest .button.btn_rg:active {
     -webkit-transform: scale(0.97);
             transform: scale(0.97); }
+  @media screen and (min-width: 768px) {
+    .regest .button.btn_rg {
+      font-size: 1.1em; } }
 
 .user {
   color: #0B4357; }
@@ -3172,39 +3175,29 @@ footer .creditos a:hover {
   border: 1px solid #E1E8ED;
   border-radius: 3px; }
   .input:focus {
-    color: #0E4C73;
     border: 1px solid #35AFBD; }
 
-@media screen and (max-width: 479px) {
-  .inpt_rg {
-    padding: 7px;
-    font-size: 18px; } }
-
-@media screen and (min-width: 768px) {
-  .inpt_rg {
-    max-width: 50%;
-    font-size: 18px;
-    padding: 10px; } }
-
-@media screen and (min-width: 1024px) {
-  .inpt_rg {
-    max-width: 40%; } }
+.inpt_rg, .btn_rg {
+  margin: .2em 0;
+  width: 100%; }
+  @media screen and (max-width: 767px) {
+    .inpt_rg, .btn_rg {
+      padding: 7px;
+      font-size: 18px; } }
+  @media screen and (min-width: 768px) {
+    .inpt_rg, .btn_rg {
+      font-size: 18px;
+      padding: 10px; } }
 
 .inpt_lg {
   font-size: 16px;
   padding: 8px;
   margin-bottom: 8px; }
 
-@media screen and (min-width: 768px) {
-  .inpt {
-    padding: 0; } }
-
-.inpt, .inpt_d {
-  margin: 5px 0; }
-
-@media screen and (min-width: 768px) {
-  .btn {
-    padding: 0; } }
+.rg_lg {
+  margin: 1.5em; }
+  .rg_lg a {
+    color: #038A72; }
 
 .button {
   font-size: 15px; }

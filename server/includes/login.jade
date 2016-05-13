@@ -1,13 +1,9 @@
 main#main
   .ed-container.animated.fadeIn.abcenter
-    .ed-item.base-80.tablet-35.web-25
+    .ed-item.login.base-90.tablet-35.web-25
       form(action='/' ng-submit="login.login()" method="post")
         input.base-100.input.inpt_lg(type="text" ng-model="login.email" placeholder="Correo / Usuario")
         input.base-100.input.inpt_lg(type="password" ng-model="login.password" placeholder="Contraseña")
         input.base-100.button.btn_uno(type="submit" value="Iniciar Sesión")
+    .ed-item.lg_rg
       span No tienes una cuenta? #[a(href="/") Registrate]
-    //.ed-item.regis.abcenter
-      h2 Registrarse
-      a.button.btn_dos(href="/registro/profesor") Profesor
-      a.button.btn_dos(href="/registro/padre") Padre
-      a.button.btn_dos(href="/registro/estudiante") Estudiante

@@ -11,8 +11,7 @@ exports.findAllUsers = function(req, res) {
     }
     return res
             .status(200)
-            //.send({token: service.createToken(user)}); // return all todos in JSON format
-            .send({user:user});
+            .send({token: service.createToken(user)}); // return all todos in JSON format
   });
 };
 
@@ -84,7 +83,7 @@ exports.deleteUser = function(req, res) {
 
 //Auth - login
 exports.userLogin = function(req, res) {
-  User.findOne({email: req.body.email, password: req.body.password}, function(err, user) {
+  User.findOne({username: req.body.username, password: req.body.password}, function(err, user) {
     if (err) {
             res.json({
                 type: false,

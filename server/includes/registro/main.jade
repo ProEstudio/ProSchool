@@ -1,21 +1,12 @@
 main#main
-  .ed-container
-    .ed-item.regest.no-padding
+  .ed-container.abcenter
+    .ed-item.regest.tablet-45.web-30
       form
-        .ed-container
-          .ed-item.abcenter
-            h1.animated.fadeInLeft Registrate
-          .ed-item.inpt_d.base-50.main-end
-            input.base-100.input.inpt_rg.animated.fadeInUp(type="text" placeholder="Nombres" ng-model="formData.name")
-          .ed-item.inpt_d.base-50
-            input.base-100.inpt_rg.input.animated.fadeInUp(type="text" placeholder="Apellidos" ng-model="formData.lastname")
-          .ed-item.abcenter.inpt
-            input.input.inpt_rg.base-100.animated.fadeInUp(type="text" placeholder="Nombre de Usuario" ng-model="formData.username")
-          .ed-item.abcenter.inpt
-            input.input.inpt_rg.base-100.animated.fadeInUp(type="text" placeholder="Correo Electronico (Opcional)" ng-model="formData.email" )
-          .ed-item.abcenter.inpt
-            input.input.inpt_rg.base-100.animated.fadeInUp(type="password" placeholder="Contraseña" ng-model="formData.password")
-          .ed-item.btn.tablet-75.web-70.main-end
-            button.animated.fadeInUp.button.btn_uno(ng-click="createUser()") Registar
-          .ed-item.btn.tablet-75.web-70.main-end
-            span Ya tienes una cuenta? #[a(href="/login") Entrar]
+        h1.animated.fadeInDown Registrate
+        input.input.inpt_rg.animated.fadeInUp(type="text" placeholder="Nombre Completo" ng-model="formData.name")
+        input.input.inpt_rg.animated.fadeInUp(type="text" placeholder="Nombre de Usuario" ng-model="formData.username")
+        input.input.inpt_rg.animated.fadeInUp(type="text" placeholder="Correo Electronico (Opcional)" ng-model="formData.email" )
+        input.input.inpt_rg.animated.fadeInUp(type="password" placeholder="Contraseña" ng-model="formData.password")
+        button.button.btn_uno.btn_rg.animated.fadeInUp(ng-click="createUser()") Registrate
+    .ed-item.rg_lg
+      span.animated.fadeIn Ya tienes una cuenta? #[a(href="/login") Entrar]
