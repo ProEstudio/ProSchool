@@ -1,21 +1,18 @@
 /* jshint node: true */
-var User = require('../models/registro');
 var express = require('express');
 var router = express.Router();
+var UserCtrl  = require('../controllers/users');
 
 router.route('/')
-  .get(function(req,res) {
-    User.find(function(err, user) {
-        if(err) {
-            res.send(err);
-        }
-        res.json(user);
-    });
-  })
-  .post(function(req, res) {
-    User.findOne({username:req.body.user,password:req.body.pass},function(err,user){
-      req.session.user_id = user._id;
-      res.redirect('/home');
-    });
-    //res.render('../views/home', {title: 'Proschool'});
-  });
+  .get(UserCtrl.findAllUsers)
+  .post(UserCtrl.addUser);
+
+router.route('/user/:id')
+  .get(UserCtrl.findById)
+  .put(UserCtrl.updateUser)
+  .delete(UserCtrl.deleteUser);
+
+router.route('/auth')
+  .post(UserCtrl.userLogin);
+
+module.exports = router;

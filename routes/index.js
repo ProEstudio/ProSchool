@@ -1,40 +1,25 @@
 /* jshint node: true */
 
-var User = require('../models/registro');
 var express = require('express');
 var router = express.Router();
+var IndexCtrl  = require('../controllers/index');
+var UserCtrl  = require('../controllers/users');
 
 /* GET home page. */
+/*router.route('/views/*')
+  .get(function(req,res){
+    res.render('../../public/views/' + req.params);
+  });
+router.route('*')
+  .get(function(req,res){
+    res.render('index');
+  });*/
+
 router.route('/')
-  .get(function(req,res) {
-    res.render('index', { title: 'ProSchool_BETA' });
-  })
-  .post(function(req, res) {
-    User.findOne({username:req.body.user,password:req.body.pass},function(err,user){
-      req.session.user_id = user._id;
-      res.redirect('/home');
-    });
-    //res.render('../views/home', {title: 'Proschool'});
-  });
+  .get(IndexCtrl.index)
+  .post(UserCtrl.userLogin);
 
-router.route('/home')
-  .get(function(req,res){
-  res.render('../views/home',{title: 'Proschool'});
-});
-
-router.route('/buscar')
-  .get(function(req,res){
-    res.render('../views/buscar');
-  });
-
-router.route('/notas')
-  .get(function(req,res){
-    res.render('../views/perfil/estudiante/periodo');
-  });
-
-router.route('/horario')
-  .get(function(req,res){
-    res.render('../views/perfil/estudiante/horario');
-  });
+router.route('/login')
+  .get(IndexCtrl.login);
 
 module.exports = router;

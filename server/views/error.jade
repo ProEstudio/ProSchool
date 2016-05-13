@@ -1,0 +1,8 @@
+extends ../includes/layout
+
+block main-content
+  .ed-container
+    .ed-item
+      h1= message
+      h2= error.status
+      pre #{error.stack}
