@@ -32,7 +32,7 @@ gulp.task('browser-sync', ['nodemon'], function () {
   browserSync.init(null, {
     proxy: "http://localhost:8080",
     files: ["public/**/*.*","server/**/*.jade","routes/**/*.js","javascripts/**/*.js"],
-    browser: "chrome",
+    browser: "",
     port: 7000,
   });
   browserSync.watch('./scss/**/*.scss').on('change', function () {
