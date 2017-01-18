@@ -22,4 +22,19 @@ router.route('/')
 router.route('/login')
   .get(IndexCtrl.login);
 
+router.route('/home')
+  .get(IndexCtrl.home);
+
+router.route('/users')
+  .get(IndexCtrl.perfil);
+
+router.route('/notas')
+  .get(IndexCtrl.notas);
+
+router.route('/users/actividad')
+  .get(IndexCtrl.actividad);
+
+router.route('/horario')
+  .get(IndexCtrl.horario);
+
 module.exports = router;

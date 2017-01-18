@@ -1,0 +1,7 @@
+main#index
+  .ed-container
+    .ed-item
+      include ../registro/main
+
+      //li(ng-repeat='user in users')
+        p {{user.name}} {{user.lastname}} #[button(ng-click="deleteUser()") Eliminar]

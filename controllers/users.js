@@ -91,9 +91,7 @@ exports.userLogin = function(req, res) {
             });
         } else {
             if (user) {
-               res.json({
-                    data: user
-                });
+              res.redirect('/home')
             } else {
                 res.json({
                     type: false,

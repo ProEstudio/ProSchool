@@ -1,0 +1,17 @@
+.ed-container
+  .ed-item.animated.fadeIn.pta.no-padding.base-15.web-10
+    img(src="/images/user.png", alt="")
+  .ed-item.usern.base-85
+    strong {{user.name}}
+    p {{user.username}}
+  .ed-item.pth.no-padding.web-90
+    p  {{user.pots[0]}}
+  .ed-item.coment.web-90
+    ul(ng-hide='comentarios.length == 0').ed-menu.base-columna
+        li(ng-repeat="comentario in comentarios") #[strong {{comentario.user}}] {{comentario.comentario}}
+  .ed-item.animated.fadeIn.cm_inpt.no-padding.base-85.web-80
+    input.inpt_cm.base-100(type="text" placeholder="Añadir un comentario" ng-model="nuevoComentario.comentario")
+  .ed-item.animated.fadeIn.btn_cm.no-padding.base-15.abcenter.web-10
+    button.button.btn_cinco.ion-paper-airplane.base-100(ng-click="agregarComentario()")
+
+

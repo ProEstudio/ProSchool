@@ -1,0 +1,12 @@
+main#main
+  .ed-container.abcenter
+    .ed-item.regest.tablet-45.web-30
+      form
+        h1.animated.fadeInDown Registrate
+        input.input.inpt_rg.animated.fadeInUp(type="text" placeholder="Nombre Completo" ng-model="formData.name")
+        input.input.inpt_rg.animated.fadeInUp(type="text" placeholder="Nombre de Usuario" ng-model="formData.username")
+        input.input.inpt_rg.animated.fadeInUp(type="text" placeholder="Correo Electronico (Opcional)" ng-model="formData.email" )
+        input.input.inpt_rg.animated.fadeInUp(type="password" placeholder="Contraseña" ng-model="formData.password")
+        button.button.btn_uno.btn_rg.animated.fadeInUp(ng-click="createUser()") Registrate
+    .ed-item.rg_lg
+      span.animated.fadeIn Ya tienes una cuenta? #[a(href="/login") Entrar]
